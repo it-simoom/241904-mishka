@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Форма</title>
+  </head>
+  <body>
+    <div class="top">
+      <a class="top__logo" href="#">
+        <img class="top__logo-image" src="http://placehold.it/150x100" width="36px" height="90px" alt="Логотип">
+      </a>
+      <nav class="navigation">
+        <button class="navigation__toggle" type="button"></button>
+        <div class="navigation__wraper">
+          <ul class="navigation__list menu-list">
+            <li class="menu-list__item">
+              <a class="" href="#">Каталог товаров</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="" href="#">Вязание на заказ</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="" href="#">Поиск по сайту</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="" href="#">Корзина: <span class="menu-list__item-box">Пока пуста</span></a>
+            </li>
+          </ul>
+        <div>
+      </nav>
+    </div>
+
+    <header class="form-header">
+      <div class="form-header__wrapper">
+        <p class="form-header__title">Вязание на заказ</p>
+    </div>
+    </header>
+
+    <main class="form-main">
+      <div class="form-main__wrapper">
+        <form class="form-main form" action="https://echo.htmlacademy.ru" method="post" name="form">
+          <p class="form__title">Вязание на заказ</p>
+          <div class="form__type">
+            <P class="form__text">ТИП<span class="form__line"></span></p>
+            <input class="form__type-input" type="radio" id="accessary">
+            <label class="form__label" for="accessary">Аксессуар для  интерьера</label><br>
+            <input class="form__type-input" type="radio" id="toys">
+            <label class="form__label" for="toys">Детская игрушка</label>
+          </div>
+          <div class="form__color">
+            <P class="form__text">ЦВЕТ<span class="form__line"></span></p>
+            <input class="form__color-input" type="checkbox" id="check-white" checked>
+            <label class="form__label" for="check-white">Белый</label><br>
+            <input class="form__color-input" type="checkbox" id="check-gray" checked>
+            <label class="form__label" for="check-gray">Серый</label><br>
+            <input class="form__color-input" type="checkbox" id="check-tiffany">
+            <label class="form__label" for="check-tiffany">&laquo;Тиффани&raquo;</label><br>
+            <input class="form__color-input" type="checkbox" id="check-black">
+            <label class="form__label" for="check-black">Черный</label><br>
+            <input class="form__color-input" type="checkbox" id="check-pink">
+            <label class="form__label" for="check-pink">Розовый</label><br>
+            <input class="form__color-input" type="checkbox" id="check-orange">
+            <label class="form__label" for="check-orange">Оранжевый</label><br>
+          </div>
+          <div class="form__fio">
+            <P class="form__text">ФИО<span class="form__line"></span></p>
+            <label class="form__label" for="accessary">Имя:</label><br>
+            <input class="form__fio-input" type="text" id="name" placeholder="Введите ваше имя*">
+            <label class="form__label" for="surname">Фамилия:</label><br>
+            <input class="form__fio-input" type="text" id="surname" placeholder="Укажите фамилию*">
+            <label class="form__label" for="th-name">Отчество:</label><br>
+            <input class="form__fio-input" type="text" id="th-name" placeholder="Отчество, если желаете">
+          </div>
+          <div class="form__phone">
+            <P class="form__text">ТЕЛ<span class="form__line"></span></p>
+            <input class="form__phone-input" type="tel" placeholder="+7 xxx xx xx*">
+          </div>
+          <div class="form__email">
+            <P class="form__text">E-MAIL<span class="form__line"></span></p>
+            <input class="form__email-input" type="email" placeholder="Ваш Email*">
+          </div>
+          <div class="form__add">
+            <P class="form__text">ДОП<span class="form__line"></span></p>
+            <textarea class="form__add-input" placeholder="Опишите все ваши пожелания к заказу">
+          </div>
+           <small class="form__legend">
+             <sup>*</sup>Поля обязательны для заполнения
+           </small>
+           <button class="form__button button" type="submit"></button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item social__item--instagram">
+              <a href="#">Вконтакте</a>
+            </li>
+            <li class="social__item social__item--facebook">
+              <a href="#">Facebook</a>
+            </li>
+            <li class="social__item social__item--twitter">
+              <a href="#">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__logo" href="http://www.htmlacademy.ru"></a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
