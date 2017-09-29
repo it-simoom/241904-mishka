@@ -1,9 +1,9 @@
 .form-main {
-  border: 1px solid orange;
   padding: 0 30px 0 30px;
 }
 .form {
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
   &__title {
     .font(@os1, 0.8em, 2);
     padding: 0;
@@ -19,16 +19,17 @@
     align-content: space-around;
     justify-content: flex-start;
   }
+
   &__text { color: #62d1ba; }
   &__line {}
   &__type-input { display: none; }
   &__type-label { .radio-label() }
+
   &__type-text {
     flex-basis: 170px;
     padding: 5px 0px 0px 25px;
     flex-grow: 1;
   }
-  &__label:checked { background: #62d1ba; width: 50px; }
 
   &__color-list {
     .noListStyle();
@@ -59,7 +60,8 @@
     display: inline-block;
     margin: 0px 0px 0px 20px;
   }
-
+}
+/*
   &__fio {}
   &__fio-label { .font(@osb1) }
   &__fio-input { display: block; }
@@ -73,3 +75,4 @@
   &__legend {}
   &__button { }
 }
+*/
