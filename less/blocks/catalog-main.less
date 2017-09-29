@@ -1,0 +1,69 @@
+.catalog-main { /* <main> */
+  &__wrapper {  /* <div> */
+    order: 1px solid orange;
+    margin-top: 20px;
+  }
+  &__video-wrapper { /* <div> */
+    border: 1px solid #ececec;
+    margin: 60px auto;
+  }
+  &__video {  /* <video> */
+    margin: 0 auto 0 30px;
+    order: 1px solid orange;
+  }
+  &__video-title { /* <b> */
+    .font(@osb1, 1em, 1.5);
+    display: block;
+    margin: auto;
+    padding: 20px 30px 20px 130px;
+    order: 1px solid green;
+    background: url("../../img/icon-video.svg") 23% 50% no-repeat;
+  }
+  &__video-text { /* <p> */
+    borer: 1px solid lightgreen;
+    .font(@os1, 0.8em, 2.5);
+    padding: 10px 50px 0px 65px;
+  }
+  &__button {
+    width: 190px;
+    margin: 0px 0px 40px 65px;
+  }
+}
+
+.catalog-list { /* <div> */
+  .noListStyle();
+  &__item { /* <li> */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    padding: 0 0 0 30px;
+    border-bottom:  1px solid #ececec;;
+  }
+  &__image-link { /* <a> */ }
+  &__image {  /* <img> */ }
+  &__name-link {  /* <a> */
+    .font(@osb1, 1.1em, 1);
+    margin: 25px 80px 0px 20px;
+  }
+  &__item-description {
+    .font(@os1, 0.8em, 1);
+    margin: 20px 20px 0px 20px;
+  }
+  &__price {  /* <div> */
+    .font(@osb1, 1em, 1);
+    display: flex;
+    flex-direction: row;
+    lex-basis: 260px;
+    width: 260px;
+    margin: 30px 80px 0px 20px;
+    padding-top: 20px;
+    justify-content: space-between;
+    border-top: 1px solid #ececec;
+  }
+  &__price-value {  /* <b> */ }
+  &__add-cart-link {  /* <a> */ }
+  &__add-cart-image { /* <img> */ }
+}
