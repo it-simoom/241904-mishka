@@ -31,8 +31,8 @@
           </div>
         </nav>
       </div>
-    <div class="page-header__title">
-      <h1 class="page-header__text">Вязание на заказ</h1>
+    <div class="page-header__content-catalog">
+      <h1 class="page-header__title">Вязание на заказ</h1>
     </div>
     </header>
 
@@ -41,48 +41,73 @@
         <form class="form-main form" action="https://echo.htmlacademy.ru" method="post" name="form">
           <p class="form__title">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <div class="form__type">
-            <b class="form__text">ТИП<span class="form__line"></span></b>
-            <input class="form__type-input" type="radio" id="accessary">
-            <label class="form__label" for="accessary">Аксессуар для  интерьера</label><br>
-            <input class="form__type-input" type="radio" id="toys">
-            <label class="form__label" for="toys">Детская игрушка</label>
+            <b class="form__text">ТИП  ---------------------------------------<span class="form__line"></span></b>
+            <input class="form__type-input" type="radio" name="type" id="accessary">
+            <input class="form__type-input" type="radio" name="type" id="toys">
+
+            <label class="form__type-label" for="accessary"></label>
+            <span class="form__type-text">Аксессуар для  интерьера</span>
+            <label class="form__type-label" for="toys"></label>
+            <span class="form__type-text">Детская игрушка</span>
           </div>
           <div class="form__color">
-            <b class="form__text">ЦВЕТ<span class="form__line"></span></b>
-            <input class="form__color-input" type="checkbox" id="check-white" checked>
-            <label class="form__label" for="check-white">Белый</label>
-            <input class="form__color-input" type="checkbox" id="check-gray" checked>
-            <label class="form__label" for="check-gray">Серый</label>
-            <input class="form__color-input" type="checkbox" id="check-tiffany">
-            <label class="form__label" for="check-tiffany">&laquo;Тиффани&raquo;</label>
-            <input class="form__color-input" type="checkbox" id="check-black">
-            <label class="form__label" for="check-black">Черный</label>
-            <input class="form__color-input" type="checkbox" id="check-pink">
-            <label class="form__label" for="check-pink">Розовый</label>
-            <input class="form__color-input" type="checkbox" id="check-orange">
-            <label class="form__label" for="check-orange">Оранжевый</label>
+            <b class="form__text">ЦВЕТ ---------------------------------------<span class="form__line"></span></b>
+            <div class="form__color-input-wrapper">
+              <input class="form__color-input" type="checkbox" id="check-white" checked>
+              <input class="form__color-input" type="checkbox" id="check-gray" checked>
+              <input class="form__color-input" type="checkbox" id="check-tiffany">
+              <input class="form__color-input" type="checkbox" id="check-black">
+              <input class="form__color-input" type="checkbox" id="check-pink">
+              <input class="form__color-input" type="checkbox" id="check-orange">
+            </div>
+            <ul class="form__color-list">
+              <li class="form__color-item">
+                <label class="form__color-label form__color-label-v" for="check-white"></label>
+                <span class="form__color-name">Белый</span>
+              </li>
+              <li class="form__color-item">
+                <label class="form__color-label form__color-label-v" for="check-gray"></label>
+                <span class="form__color-name">Серый</span>
+              </li>
+              <li class="form__color-item">
+                <label class="form__color-label" for="check-tiffany"></label>
+                <span class="form__color-name">&laquo;Тиффани&raquo;</span>
+              </li>
+              <li class="form__color-item">
+                <label class="form__color-label" for="check-black"></label>
+                <span class="form__color-name">Черный</span>
+              </li>
+              <li class="form__color-item">
+                <label class="form__color-label" for="check-pink"></label>
+                <span class="form__color-name">Розовый</span>
+              </li>
+              <li class="form__color-item">
+                <label class="form__color-label" for="check-orange"></label>
+                <span class="form__color-name">Оранжевый</span>
+              </li>
+            <ul>
           </div>
           <div class="form__fio">
-            <b class="form__text">ФИО<span class="form__line"></span></b>
+            <b class="form__text">ФИО ---------------------------------------<span class="form__line"></span></b>
             <div class="form__fio-point">
-              <label class="form__label" for="name">Имя:</label>
+              <label class="form__fio-label" for="name">Имя:</label>
               <input class="form__fio-input" type="text" id="name" placeholder="Введите ваше имя*">
             </div>
             <div class="form__fio-point">
-              <label class="form__label" for="surname">Фамилия:</label>
+              <label class="form__fio-label" for="surname">Фамилия:</label>
               <input class="form__fio-input" type="text" id="surname" placeholder="Укажите фамилию*">
             </div>
             <div class="form__fio-point">
-              <label class="form__label" for="th-name">Отчество:</label>
+              <label class="form__fio-label" for="th-name">Отчество:</label>
               <input class="form__fio-input" type="text" id="th-name" placeholder="Отчество, если желаете">
             </div>
           </div>
           <div class="form__phone">
-            <b class="form__text">ТЕЛ<span class="form__line"></span></b>
+            <b class="form__text">ТЕЛ ---------------------------------------<span class="form__line"></span></b>
             <input class="form__phone-input" type="tel" placeholder="+7 xxx xx xx*">
           </div>
           <div class="form__email">
-            <b class="form__text">E-MAIL<span class="form__line"></span></b>
+            <b class="form__text">E-MAIL ---------------------------------------<span class="form__line"></span></b>
             <input class="form__email-input" type="email" placeholder="Ваш Email*">
           </div>
           <div class="form__add">
@@ -92,7 +117,7 @@
           <small class="form__legend">
             <sup>*</sup>Поля обязательны для заполнения
           </small>
-          <button class="form__button button" type="submit"></button>
+          <button class="form__button button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
         </form>
       </div>
     </main>
