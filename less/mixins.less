@@ -1,7 +1,12 @@
 @import url("variables.less");
 
-.font(@fam, @size, @lh) {
+.font(@fam: @os1; @size: 1em; @lh: 1) {
   font-family: @fam;
   font-size: @size;
   line-height: @lh;
+}
+.noListStyle() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
