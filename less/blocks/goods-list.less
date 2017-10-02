@@ -1,8 +1,12 @@
 .goods-list {
   .noListStyle();
-  .font(@osb1, 1em, 1)
+  .font(@osb1, 1em, 1);
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
 }
 .goods-list__item {
+  width: 100%;
   height: px;
   padding: 29px 30px;
 }
@@ -19,4 +23,22 @@
 }
 .goods-list__item--toys {
   background: url("../../img/icon-toy.svg") no-repeat 87% 50% #56c3b2;
+}
+@media (min-width: @tablet-width) {
+  .goods-list {
+    margin: 230px 50px 0 50px;
+    &__item {
+      width: auto;
+      flex-grow: 1;
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .goods-list {
+    margin: 250px 100px 0 100px;
+    &__item {
+      width: auto;
+      flex-grow: 1;
+    }
+  }
 }

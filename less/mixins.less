@@ -35,3 +35,37 @@
   border-right: none;
   transform: rotate(-45deg);
 }
+.input-text() {
+  width: 260px;
+  height: 50px;
+  border-color: #000000 ;
+  border-width: 0 0 2px 0;
+  .font(@os1, 1.1em, 1);
+  color: #f0f0f0;
+}
+.toggle-prev() {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -10px;
+  left: 0px;
+  transform: rotate(45deg);
+  width: 12px;
+  height: 12px;
+  border: 4px solid black;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.toggle-next() {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -10px;
+  left: 30px;
+  transform: rotate(225deg);
+  width: 12px;
+  height: 12px;
+  border: 4px solid black;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}

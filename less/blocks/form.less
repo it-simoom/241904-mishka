@@ -3,7 +3,7 @@
 }
 .form {
   padding: 0;
-  margin: 0;
+  margin: 0 0 35px 0;
   &__title {
     .font(@os1, 0.8em, 2);
     padding: 0;
@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-around;
+    lign-content: space-around;
     justify-content: flex-start;
   }
 
@@ -60,19 +60,49 @@
     display: inline-block;
     margin: 0px 0px 0px 20px;
   }
-}
-/*
+
   &__fio {}
-  &__fio-label { .font(@osb1) }
-  &__fio-input { display: block; }
+  &__fio-point {
+    margin: 25px 0px 0px 0px;
+  }
+  &__fio-label {
+    .font(@osb1);
+    margin: 0px 0px 0px 0px;
+  }
+  &__fio-input {
+    .input-text();
+    .font(@os1, 1em);
+  }
 
-  &__phone {}
-  &__phone-input {}
+  &__phone {
+    margin: 35px 0px 0px 0px;
+  }
+  &__phone-input {
+    .input-text();
+    background: url("../../img/icon-phone.svg") no-repeat 100% 50%;
+  }
 
-  &__email-input {}
-  &__add {}
-  &__add-input {}
+  &__email {
+    margin: 35px 0px 0px 0px;
+  }
+  &__email-input {
+    .input-text();
+    background: url("../../img/icon-mail.svg") no-repeat 100% 50%;
+  }
+
+  &__add {
+    margin: 35px 0px 0px 0px;
+  }
+  &__add-input {
+    width: 260px;
+    height: 140px;
+    margin: 20px 0 10px 0;
+    border: 2px solid #000000;
+    padding: 15px;
+    box-sizing: border-box;
+    .font(@os1, 1em);
+  }
+
   &__legend {}
-  &__button { }
+  &__button { margin: 35px 0 20px 0; }
 }
-*/

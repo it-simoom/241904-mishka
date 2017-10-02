@@ -3,6 +3,11 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     position: relative;      /*  Temp line */
+   }
+   &__logo {
+     padding: 20px 0;
+     margin: 0 10px 0 120px;
    }
 }
 
@@ -28,7 +33,59 @@
   }
 }
 
-.page-header__logo {
-  padding: 20px 0;
-  margin: 0 10px 0 auto;
+@media (min-width: @tablet-width) {
+  .page-header{
+    &__top {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    &__logo {
+      width: ;
+      margin: 0 10px 0 50px;
+      padding:
+      0px 0;
+    }
+    &__logo-image {
+      padding: 20px 0;
+    }
+    &__content {
+      height: 745px;
+      border-top: 1px solid #ececec;
+      background: url("../../img/hero-mobile@1x.jpg") no-repeat;
+      background-position: center -15px;
+      background-size: 140%;
+      background-position: center 0px;
+    }
+    &__title {
+      .font(@osb2, 2.7em, 1.2);
+      width: 595px;
+      margin: 60px auto 0;
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .page-header{ margin: 0 auto;
+    &__top {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    &__logo {
+      width: ;
+      margin: 0 10px 0 50px;
+    }
+    &__content {
+      height: 745px;
+      border-top: 1px solid #ececec;
+      background: url("../../img/hero-mobile@1x.jpg") no-repeat;
+      background-position: center -15px;
+      background-size: 90%;
+      background-position: center 0px;
+    }
+    &__title {
+      .font(@osb2, 3.2em, 1.1);
+      width: 595px;
+    }
+  }
 }

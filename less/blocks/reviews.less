@@ -37,33 +37,110 @@
   background: black;
   border: 1px solid black;
   position: relative;
-  &--prev::before {
-    position: absolute;
-    content: "";
-    display: block;
-    top: -10px;
-    left: 0px;
-    transform: rotate(45deg);
-    width: 12px;
-    height: 12px;
-    border: 4px solid black;
-    border-top-color: transparent;
-    border-right-color: transparent;
-  }
-  &--next::after {
-    position: absolute;
-    content: "";
-    display: block;
-    top: -10px;
-    left: 30px;
-    transform: rotate(225deg);
-    width: 12px;
-    height: 12px;
-    border: 4px solid black;
-    border-top-color: transparent;
-    border-right-color: transparent;
-  }
+  &--prev::before { .toggle-prev(); }
+  &--next::after  { .toggle-next(); }
 }
 .reviews__button {
   margin: 10px 0px 30px 30px;
+}
+@media (min-width: @tablet-width) {
+  .reviews {
+    &__wrapper {
+      border: 1px solid orange;
+      background: url("../../img/review@1x.jpg") no-repeat;
+      height: 525px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+    &__title {
+      .font(@osb1, 2.7em, 1);
+      order: 0;
+      padding: 0;
+      margin: 85px 0 0 50px; /* 85 */
+    }
+    &__text {
+      .font(@os1, 1em, 1.9);
+      order: 2;
+      margin: 45px 70px 0 50px;
+      padding: 0;
+    }
+    &__name-email {
+      width: 240px;
+      padding: 0;
+      margin: 60px 0 0 50px;
+      order: 3;
+    }
+    &__name {
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 15px 0px;
+    }
+    &__email {
+      padding: 0px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    &__toggles {
+      order: 4;
+      width: 165px;
+      margin: 60px 50px 0 auto; /* 20 */
+    }
+    &__toggle--prev { order: ; }
+    &__toggle--next { order: ; }
+    &__button {
+      order: 1;
+      width: 175px !important;
+      margin: 85px 50px 0 auto; /* 85 */
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    &__wrapper {
+      border: 1px solid orange;
+      background: url("../../img/review@1x.jpg") no-repeat 100px top;
+      height: 525px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+    &__title {
+      .font(@osb1, 3.2em, 1);
+      order: 0;
+      padding: 0;
+      margin: 85px 0 0 275px; /* 85 */
+    }
+    &__text {
+      .font(@os1, 1em, 1.9);
+      order: 2;
+      margin: 45px 70px 0 275px;
+      padding: 0;
+    }
+    &__name-email {
+      width: 240px;
+      padding: 0;
+      margin: 60px 0 0 275px;
+      order: 3;
+    }
+    &__name {
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 15px 0px;
+    }
+    &__email {
+      padding: 0px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    &__toggles {
+      order: 4;
+      width: 165px;
+      margin: 60px 100px 0 auto; /* 20 */
+    }
+    &__toggle--prev { order: ; }
+    &__toggle--next { order: ; }
+    &__button {
+      order: 1;
+      width: 175px !important;
+      margin: 85px 100px 0 auto; /* 85 */
+    }
+  }
 }

@@ -11,14 +11,17 @@
         <a class="page-header__logo" href="catalog.html">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Логотип">
         </a>
-        <nav class="navigation">
+        <button class="navigation__toggle" href="#">
+          <img class="navigation__image" src="img/icon-menu-open.svg">
+        </button>
+<!--        <nav class="navigation">
           <button class="navigation__toggle" href="#"><img class="navigation__image" src="img/icon-menu-open.svg"></button>
-          <div class="navigation__wraper">
+          <div class="navigation__wraper">  -->
             <ul class="navigation__list menu-list">
-              <li class="menu-list__item menu-list__item--first">
+              <li class="menu-list__item menu-list__item--catalog">
                 <a class="menu-list__link" href="#">Каталог товаров</a>
               </li>
-              <li class="menu-list__item">
+              <li class="menu-list__item menu-list__item--weaving">
                 <a class="menu-list__link" href="#">Вязание на заказ</a>
               </li>
               <li class="menu-list__item menu-list__item--search">
@@ -28,8 +31,8 @@
                 <a class="menu-list__link" href="#">Корзина: <span class="menu-list__item-box">Пока пуста</span></a>
               </li>
             </ul>
-          </div>
-        </nav>
+  <!--        </div>
+  </nav>    -->
       </div>
       <div class="page-header__content">
         <h1 class="page-header__title">Милые штуки ручной<br> работы для дома</h1>
@@ -45,51 +48,48 @@
     </header>
 
     <main class="page-main">
-
       <section class="featured">
-        <div class="featured__wrapper">
-          <b class="featured__title">Вязаные корзинки</b>
+        <div class="featured__title">
+          <b class="featured__text">Вязаные корзинки</b>
           <span class="featured__title-clarify">Товар недели</span>
-          <p class="featured__description">Экологически чистая пряжа, ручная работа. Дотупны в шести расцветках, и трёх размерах</p>
-          <table class="featured__list">
-            <tr class="featured__list-row">
-              <td class="featured__item">Цвет:</td>
-              <td class="featured__value">&laquo;Тиффани&raquo;/серый</td>
-            </tr>
-            <tr class="featured__list-row">
-              <td class="featured__item">Диаметр:</td>
-              <td class="featured__value">25 см</td>
-            </tr>
-            <tr class="featured__list-row">
-              <td class="featured__item">Высота:</td>
-              <td class="featured__value">15 см</td>
-            </tr>
-          </table>
-          <div class="featured__img-price-order IPO">
-            <div class="IPO__image-wrapper">
-              <img class="IPO__image" src="img/triple-set-mobile@1x.jpg" width="" height="" alt="Вязаные корзинки">
+        </div>
+        <div class="featured__content">
+         <p class="featured__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трёх размерах</p>
+         <table class="featured__list">
+           <tr class="featured__list-row">
+             <td class="featured__item">Цвет:</td>
+             <td class="featured__value">&laquo;Тиффани&raquo;/серый</td>
+           </tr>
+           <tr class="featured__list-row">
+             <td class="featured__item">Диаметр:</td>
+             <td class="featured__value">25 см</td>
+           </tr>
+           <tr class="featured__list-row">
+             <td class="featured__item">Высота:</td>
+             <td class="featured__value">15 см</td>
+             </tr>
+         </table>
+         <img class="featured__image" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+         <div class="featured__price-wrapper">
+           <span class="featured__price-text">Цена:</span>
+           <span class="featured__price-value">990 руб.</span>
+         </div>
+         <button class="featured__button" type="button">ЗАКАЗАТЬ</button>
+       </div>
+        <div class="add-to-cart">
+          <b class="add-to-cart__title">ДОБАВИТЬ В КОРЗИНУ</b>
+          <span class="add-to-cart__choose-size">Выберите размер:</span>
+          <div class="add-to-cart__sizes">
+            <input class="add-to-cart__radio" type="radio" name="size" id="s" checked>
+            <input class="add-to-cart__radio" type="radio" name="size" id="m">
+            <input class="add-to-cart__radio" type="radio" name="size" id="l">
+            <div class="add-to-cart__sizes-toggle">
+              <label class="add-to-cart__size add-to-cart__size--s" for="s"></label>
+              <label class="add-to-cart__size add-to-cart__size--m" for="m"></label>
+              <label class="add-to-cart__size add-to-cart__size--l" for="l"></label>
             </div>
-            <div class="IPO__price-wrapper">
-              <span class="IPO__price-text">Цена:</span>
-              <span class="IPO__price-value">990 руб.</span>
-            </div>
-            <button class="IPO__button button" type="button">ЗАКАЗАТЬ</button>
           </div>
-          <div class="add-to-cart">
-            <b class="add-to-cart__title">ДОБАВИТЬ В КОРЗИНУ</b>
-            <span class="add-to-cart__choose-size">Выберите размер:</span>
-            <div class="add-to-cart__sizes">
-              <input class="add-to-cart__radio" type="radio" name="size" id="s" checked>
-              <input class="add-to-cart__radio" type="radio" name="size" id="m">
-              <input class="add-to-cart__radio" type="radio" name="size" id="l">
-              <div class="add-to-cart__sizes-toggle">
-                <label class="add-to-cart__size add-to-cart__size--s" for="s"></label>
-                <label class="add-to-cart__size add-to-cart__size--m" for="m"></label>
-                <label class="add-to-cart__size add-to-cart__size--l" for="l"></label>
-              </div>
-            </div>
-            <button class="add-to-cart__button button">ДОБАВИТЬ</button>
-          </div>
+          <button class="add-to-cart__button button">ДОБАВИТЬ</button>
         </div>
       </section>
 
@@ -124,13 +124,15 @@
           <b class="reviews__title">Отзывы</b>
           <p class="reviews__text"> Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, она накупила акксесуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
           </p>
+          <div class="reviews__name-email">
           <b class="reviews__name">Анастасия Красильникова</b>
           <span class="reviews__email">@misssssiskras</span>
+          </div>
           <div class="reviews__toggles">
             <button class="reviews__toggle reviews__toggle--prev"></button>
             <button class="reviews__toggle reviews__toggle--next"></button>
           </div>
-          <button class="reviews__button button">НАПИСАТЬ</button>
+          <button class="reviews__button button button-tab ">НАПИСАТЬ</button>
         </div>
       </section>
 
@@ -148,7 +150,9 @@
         </div>
         <div class="contacts__map">
           <object class="contacts__map-object" data="" type=""></object>
-          <img class="contacts__map-image" width="320px" src="img/map-mobile@1x.jpg" alt="Карта города">
+          <div class="contacts__map-wrapper">
+            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" alt="Карта города">
+          </div>
           <div class="contacts__pointer">
           </div>
         </div>
