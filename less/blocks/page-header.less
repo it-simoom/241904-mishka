@@ -54,21 +54,20 @@
     &__logo-image {
       padding: 20px 0;
     }
-    &__content {
-      height: 745px;
-      border-top: 1px solid #ececec;
-      background: url("../../img/hero-mobile@1x.jpg") no-repeat;
-      background-position: center -15px;
-      background-size: 140%;
-      background-position: center 0px;
+
+    &__content-form {
+      background: #f1f1f1;
+      height: 210px;
+      border: 1px solid green;
     }
     &__title {
       .font(@osb2, 2.7em, 1.2);
       width: 595px;
-      margin: 60px auto 0;
+      margin: 15px auto 0;
     }
   }
 }
+
 @media (min-width: @desktop-width) {
   .page-header{ margin: 0 auto;
     &__top {
@@ -88,10 +87,15 @@
       background-size: 90%;
       background-position: center 0px;
     }
+    &__content-form {
+      background: #f1f1f1;
+      height: 235px;
+      border: 1px solid green;
+    }
     &__title {
       .font(@osb2, 3.2em, 1.1);
       width: 595px;
-      padding: 90px 0px 123px;
+      padding: 80px 0px 123px;
     }
   }
 }

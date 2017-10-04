@@ -23,11 +23,18 @@
 @media (min-width: @tablet-width) {
   .copyright {
     border: 1px solid green;
-    padding: 0;
-    argin-left: auto;
+    padding-right: 15px;
+    margin-right: 0px;
+    flex-grow: 1;  /* temp */
   }
 }
 
 @media (min-width: @desktop-width) {
-
+  .copyright {
+    padding-right: 0px;
+    margin-right: 100px;
+    flex-grow: 0;  /* temp */
+    width: auto;
+  }
+  .copyright__text {argin-left: 0px;}
 }

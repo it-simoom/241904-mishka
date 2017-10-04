@@ -23,6 +23,7 @@
     border: 1px solid orange;
     argin: 0;
     padding: 0;
+    flex-grow: 1;  /* temp */
   }
   .social__list {
     margin-left: 0;
@@ -30,7 +31,16 @@
 }
 
 @media (min-width: @desktop-width) {
-
+  .page-footer__social {
+    width: auto;
+    border: 1px solid orange;
+    margin-left: 205px;
+    padding-left: 0;
+    flex-grow: 0;  /* temp */
+  }
+  .social__list {
+    margin-left: 0px;
+  }
 }
 
 /*

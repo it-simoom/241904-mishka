@@ -4,26 +4,21 @@
 .page-footer__logo {
   display: none;
 }
-.page-footer__logo-link {
-
-}
-.page-footer__logo-image {
-
-}
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    &__logo {
-      display: block;
-      idth: 256px;
-      border: 1px solid green;
-      padding: 20px 0px;
-      margin: 0 auto 0 50px;
-    }
+
     &__wrapper {
       display: flex;
       justify-content: flex-start;
       align-items: center;
+    }
+    &__logo {
+      display: block;
+      border: 1px solid green;
+      padding: 20px 120px 20px 50px;
+      margin: 0 auto 0 0px;
+      flex-grow: 1;  /* temp */
     }
     &__logo-link {
       margin: 0px auto;
@@ -36,8 +31,26 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     &__logo {
     display: block;
-  }
+    border: 1px solid green;
+    padding: 20px 0px 20px 0px;
+    margin: 0 auto 0 100px;
+    flex-grow: 0;  /* temp */
+    width: 100px;
+    text-align: center;
+    }
+    &__logo-link {
+      margin: 0px auto;
+    }
+    &__logo-image {
+      width: 100px;
+    }
   }
 }
