@@ -57,6 +57,9 @@
     flex-grow: ;
   }
 
+  &__color {
+    margin-top: 20px;
+  }
   &__color-list {
     .noListStyle();
     padding: 10px 0 10px 0;
@@ -143,8 +146,8 @@
 
     &__title {
       .font(@os1, 1em, 2);
-      margin-top: 140px;
-      margin-left: 215px;
+      margin-top: 80px;
+      margin-left: 50px;
       padding-right: 0px;
       width: 610px;
     }
@@ -226,8 +229,23 @@
       adding-left: 15px;
     }
 
-    &__fio {}
+    &__fio {
+      display: flex;
+      padding: 0 50px 0 50px;
+    }
+    &__fio-wrapper {border: 1px solid orange;
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 400px;
+      margin-left: 120px;
+      flex-grow: 1;
+    }
     &__fio-point {
+      display: flex;
+      align-items: center;
+      flex-basis: 400px;
+      justify-content: center;
+      flex-grow: 1;
     }
 
     &__fio-label {
@@ -237,42 +255,78 @@
     &__fio-input {
       .input-text();
       .font(@os1, 1em);
+      margin-left: 25px;
+      width: auto;
+      flex-grow: 1;
     }
 
     &__phone {
+      display: flex;
+      align-items: center;
+      background: #f1f1f1;
+      padding: 0 50px 0 50px;
+      height: 100px;
     }
 
     &__phone-input {
       .input-text();
-      background: url("../../img/icon-phone.svg") no-repeat 100% 50%;
+      margin-left: 130px;
+      flex-grow: 1;
     }
 
     &__email {
+      display: flex;
+      background: #f1f1f1;
+      margin-top: 0;
+      padding: 0 50px 0 50px;
+      height: 100px;
     }
 
     &__email-input {
       .input-text();
+      margin-left: 105px;
+      flex-grow: 1;
     }
 
     &__add {
+      display: flex;
+      display: flex;
+      padding: 0 50px 0 50px;
+
     }
     &__add-input {
+      margin-left: 120px;
+      flex-grow: 1;
+    }
+    &__order-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 0 50px 0 50px;
+      justify-content: space-between;
     }
 
-    &__legend {}
-    &__button { margin: 35px 0 20px 0; }
+    &__legend {
+      order: 2;
+    }
+    &__button {
+      order: ;
+      margin: 35px 0 20px 0;
+
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .form-main {
-    padding: 0 30px 0 30px;
+    padding: 0 0px 0 0px;
   }
   .form {
-
+    padding-left: 0;
+    padding-right: 0;
     &__title {
       .font(@os1, 1.1em, 1.8);
-      margin-top: 85px;
+      margin-top: 135px;
+      margin-left: 215px;
       padding-right: 0px;
       width: 610px;
     }
@@ -282,12 +336,13 @@
     &__type {
       .font(@osb1, 1em);
       margin: 40px 0 50px 0;
+      padding-left: 100px;
     }
 
     &__line { display: none; }
 
     &__type-label-wrapper {
-      margin-left: 130px;
+      margin-left: 75px;
       width: 400px;
       height: 150px;
     }
@@ -304,31 +359,39 @@
       .font(@osb1, 1.2em);
       margin: 15px 0 0 30px;
     }
+    &__color {
+      margin-top: 50px;
+      padding-left: 100px;
+      height: 175px;
 
+    }
     &__color-list {
       .noListStyle();
-      margin-left: 120px;
+      margin-left: 70px;
       border: 1px solid orange;
       display: flex;
-      flex-basis: 350px;
+      flex-basis: 740px;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      flex-grow: 1;
+      justify-content: space-between;
+      align-content: center;
+      flex-grow: ;
     }
 
     &__color-input-wrapper { display: none; }
 
     &__color-item {
       display: flex;
-      align-items: center;
-      margin: 20px 0px 20px 0px;
+      margin: 10px 0px 10px 0px;
     }
-    &__color-item.check-gray { margin-left: 0px;}
-    &__color-item.check-tiffany { margin-left: 0px;}
+    &__color-item.check-pink { margin-left: 90px;}
+    &__color-item.check-black { margin-left: 0px;}
+    &__color-item.check-orange { margin-left: 30px;}
 
     &__color-label {
       position: relative;
-      .check-label()
+      .check-label();
+      width: 50px;
+      height: 50px;
     }
     &__color-label-v::after {
       content:  "";
@@ -343,49 +406,67 @@
       margin: 0px 0px 0px 20px;
     }
 
-    &__fio {}
+    &__fio {
+      border: 1px solid green;
+      margin-top: 0;
+      padding-left: 100px;
+      display: flex;
+    }
+    &__fio-wrapper {
+      display: flex;
+      flex-basis: 690px;
+      flex-grow: 0;
+      margin-left: 70px;
+    }
     &__fio-point {
+      flex-basis: 500px;
       margin: 25px 0px 0px 0px;
-    }
-    &__fio-label {
-      .font(@osb1);
-      margin: 0px 0px 0px 0px;
-    }
-    &__fio-input {
-      .input-text();
-      .font(@os1, 1em);
     }
 
     &__phone {
+      height: 115px;
       margin: 35px 0px 0px 0px;
+      padding-left: 100px;
+      padding-right: 350px;
+      align-items: baseline;
+      flex-grow: 0;
     }
     &__phone-input {
       .input-text();
       background: url("../../img/icon-phone.svg") no-repeat 100% 50%;
+      margin-left: 80px;
     }
 
     &__email {
-      margin: 35px 0px 0px 0px;
+      height: 115px;
+      margin: 0;
+      padding-left: 100px;
+      padding-right: 350px;
+      align-items: baseline;
     }
     &__email-input {
       .input-text();
       background: url("../../img/icon-mail.svg") no-repeat 100% 50%;
+      margin-left: 60px;
     }
 
+    &__order-wrapper {
+      padding-right: 350px;
+      margin: 0 0  20px 0;
+    }
     &__add {
       margin: 35px 0px 0px 0px;
+      padding-left: 100px;
+      padding-right: 350px;
     }
     &__add-input {
-      width: 260px;
-      height: 140px;
-      margin: 20px 0 10px 0;
-      border: 2px solid #000000;
-      padding: 15px;
-      box-sizing: border-box;
-      .font(@os1, 1em);
+      margin-left: 77px;
     }
 
     &__legend {}
-    &__button { margin: 35px 0 20px 0; }
+    &__button {
+      margin: 35px 0 20px 0;
+      margin-left: 160px;
+    }
   }
 }

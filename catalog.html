@@ -8,28 +8,46 @@
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo" href="catalog.html">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Логотип">
         </a>
-        <nav class="navigation">
+        <button class="navigation__toggle" href="#">
+          <img class="navigation__image" src="img/icon-menu-open.svg">
+        </button>
+<!--        <nav class="navigation">
           <button class="navigation__toggle" href="#"><img class="navigation__image" src="img/icon-menu-open.svg"></button>
-          <div class="navigation__wraper">
+          <div class="navigation__wraper">  -->
+
             <ul class="navigation__list menu-list">
-              <li class="menu-list__item menu-list__item--first">
+              <li class="menu-list__item menu-list__item--logo">
+                <a class="menu-list__link" href="#">
+                  <img class="menu-list__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Главная">
+                </a>
+              </li>
+              <li class="menu-list__item menu-list__item--catalog">
                 <a class="menu-list__link" href="#">Каталог товаров</a>
               </li>
-              <li class="menu-list__item">
+              <li class="menu-list__item menu-list__item--weaving">
                 <a class="menu-list__link" href="#">Вязание на заказ</a>
               </li>
               <li class="menu-list__item menu-list__item--search">
-                <a class="menu-list__link" href="#">Поиск по сайту</a>
+                <a class="menu-list__link link--search" href="#">Поиск по сайту</a>
               </li>
               <li class="menu-list__item menu-list__item--cart">
-                <a class="menu-list__link" href="#">Корзина: <span class="menu-list__item-box">Пока пуста</span></a>
+                <a class="menu-list__link" href="#">Корзина: <span class="menu-list__item-box">пока пуста</span></a>
+              </li>
+              <li class="menu-list__item menu-list__item--new">
+                <a class="menu-list__link link" href="#">Новые поступления</a>
+              </li>
+              <li class="menu-list__item menu-list__item--sale">
+                <a class="menu-list__link link" href="#">Распродажа</a>
+              </li>
+              <li class="menu-list__item menu-list__item--delivery">
+                <span class="menu-list__item-box">Бесплатная доставка по России</span>
               </li>
             </ul>
-          </div>
-        </nav>
+  <!--        </div>
+  </nav>    -->
       </div>
     <div class="page-header__content-catalog">
       <h1 class="page-header__title">Каталог товаров</h1>
@@ -90,6 +108,11 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a class="page-footert__logo-link" href="#">
+            <img class="page-footert__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Главная">
+          </a>
+        </div>
         <div class="page-footer__social social">
             <ul class="social__list">
             <li class="social__item">
@@ -110,11 +133,11 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__logo" href="http://www.htmlacademy.ru">
-            <img class="copyright__image" src="img\logo-htmlacademy.svg" alt="">
-          </a>
-        </div>
+         <b class="copyright__text">Разработано</b>
+         <a class="copyright__logo" href="http://www.htmlacademy.ru">
+          <img class="copyright__image" src="img\logo-htmlacademy.svg" alt="">
+        </a>
+       </div>
       </div>
     </footer>
 
