@@ -7,11 +7,13 @@
   &__title {
     .font(@os1, 0.8em, 2);
     padding: 0;
-    margin: 20px 0 20px;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 20px;
   }
   &__type {
     .font(@osb1, 1em);
-    height: 170px ; /* 170 */
+    height: 160px ; /* 170 */
     padding: 0px 0;
     display: flex;
     flex-direction: row;
@@ -134,14 +136,15 @@
 @media (min-width: @tablet-width) {
   .form-main {
     padding: 0;
-    margin: 0px 0px 0px 25px;
+    margin: 0px 0px 0px 0px;
   }
 
   .form {
 
     &__title {
       .font(@os1, 1em, 2);
-      margin-top: 85px;
+      margin-top: 140px;
+      margin-left: 215px;
       padding-right: 0px;
       width: 610px;
     }
@@ -150,7 +153,9 @@
     }
     &__type {
       .font(@osb1, 1em);
-      margin: 40px 0 50px 0;
+      margin: 35px 0 50px 0;
+        border: 1px solid orange;
+        padding: 0px 0 0 50px;
     }
 
     &__line { display: none; }
@@ -158,7 +163,7 @@
     &__type-label-wrapper {
       margin-left: 130px;
       width: 400px;
-      height: 150px;
+      height: auto;
     }
     &__type-input { display: none; }
 
@@ -174,15 +179,38 @@
       margin: 15px 0 0 30px;
     }
 
+    &__color {
+      display: flex;
+      margin-top: 0px;
+      padding: 28px 0 28px 50px;
+      background: #f1f1f1;
+    }
     &__color-input-wrapper { display: none; }
 
-    &__color-item {
-
+    &__color-list {
+      margin-left: 120px;
+      border: 1px solid orange;
+      display: flex;
+      flex-basis: 500px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-grow: ;
     }
+
+    &__color-item {
+      width: 200px;
+      margin: 10px 0px 10px 0px;
+    }
+
+    &__color-item.check-gray { margin-left: 57px; }
+    &__color-item.check-black { margin-left: 57px; }
+    &__color-item.check-orange { margin-left: 57px; }
 
     &__color-label {
       position: relative;
-      .check-label()
+      .check-label();
+      width: 50px;
+      height: 50px;
     }
     &__color-label-v::after {
       content:  "";
@@ -194,43 +222,41 @@
     &__color-name {
       .font(@osb1);
       display: inline-block;
-      margin: 0px 0px 0px 20px;
+      margin: 0px 0px 0px 30px;
+      adding-left: 15px;
     }
 
     &__fio {}
     &__fio-point {
-
     }
+
     &__fio-label {
       .font(@osb1);
-
     }
+
     &__fio-input {
       .input-text();
       .font(@os1, 1em);
     }
 
     &__phone {
-
     }
+
     &__phone-input {
       .input-text();
       background: url("../../img/icon-phone.svg") no-repeat 100% 50%;
     }
 
     &__email {
-
     }
+
     &__email-input {
       .input-text();
-
     }
 
     &__add {
-
     }
     &__add-input {
-
     }
 
     &__legend {}
@@ -245,7 +271,7 @@
   .form {
 
     &__title {
-      .font(@os1, 1em, 2);
+      .font(@os1, 1.1em, 1.8);
       margin-top: 85px;
       padding-right: 0px;
       width: 610px;
@@ -281,7 +307,13 @@
 
     &__color-list {
       .noListStyle();
-      padding: 10px 0 10px 0;
+      margin-left: 120px;
+      border: 1px solid orange;
+      display: flex;
+      flex-basis: 350px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-grow: 1;
     }
 
     &__color-input-wrapper { display: none; }
@@ -291,6 +323,8 @@
       align-items: center;
       margin: 20px 0px 20px 0px;
     }
+    &__color-item.check-gray { margin-left: 0px;}
+    &__color-item.check-tiffany { margin-left: 0px;}
 
     &__color-label {
       position: relative;
