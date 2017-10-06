@@ -4,12 +4,14 @@
 }
 .contacts__title {
   display: block;
-  padding: 0px 110px 30px 30px;
+  padding: 0px 110px 30px 0px;
+  margin: 0px 0px 0px 30px;
 }
 .contacts__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-basis: 150px;
+  flex-wrap: wrap;
   widht: 320px;
   height: 120px;
   align-items: stretch;
@@ -26,14 +28,93 @@ display: flex;
   margin-left: 30px;
 }
 .contacts__value {
+  width: 200px;
   margin: 0 20px 0 20px;
+  .font(@os1, 1em, 1);
 }
 .contacts__map-object {
   display: none;
 }
 .contacts__map-image {
   margin: 35px 0 40px 0;
+  width: 320px;
 }
 .contacts__button {
   margin: 0px 0px 40px 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    background: url("../../img/icon-flag.svg") no-repeat 680px 10px;
+    &__title {
+      .font(@osb1, 2.7em, 1);
+      margin: 50px 0px 40px 50px;
+      padding-top: 20px;
+    }
+    &__email { margin: 0px 0px 0px 10px;}
+    &__address { }
+    &__item { margin: 0; }
+    &__value { }
+    &__map-wrapper {
+      width: 768px;
+      height: 455px;
+      overflow: hidden;
+      order: 1px solid green;  /* - */
+      text-align: center;
+      background: url("../../img/map-mobile@1x.jpg");
+    }
+    &__map-image {
+      margin: 0 auto;
+      width: 520px;
+      height: 450px;
+      order: 1px solid lightgrey;  /* - */
+    }
+    &__button.button {
+      width: 230px;
+      margin: 70px 0px 40px 275px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    background: url("../../img/icon-flag.svg") no-repeat 160px 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 630px;
+    margin: 70px 0;
+    &__title {
+      .font(@osb1, 3.2em, 1);
+      margin: 50px 0px 0px 275px;
+    }
+    &__list {
+      width: 300px;
+      margin: 30px 0px 0px 275px;
+      order: 1px solid green;  /* - */
+    }
+    &__email { margin: 0px 0px 0px 10px;;}
+    &__item { margin: 0; }
+    &__value { }
+    &__map { order: 3; }
+    &__map-wrapper {
+      width: 525px;
+      height: 450px;
+      overflow: hidden;
+      order: 1px solid green; /* - */
+      text-align: center;
+      margin: 0px 100px 0px 0px;
+      background: url("../../img/map-mobile@1x.jpg");
+    }
+    &__map-image {
+      margin: 0 auto;
+      width: 520px;
+      height: 450px;
+      order: 1px solid lightgrey;  /* - */
+    }
+    &__button {
+      margin: 70px 0px 40px 275px;
+      order: 2;
+    }
+  }
 }
