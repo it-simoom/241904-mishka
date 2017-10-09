@@ -19,7 +19,7 @@
   .font(@osb2, 1.15em, 1.2);
 }
 .goods-list__item--furniture {
-    background: url("../../img/icon-interior.svg") no-repeat 87% 50% #63d1bb;
+  background: url("../../img/icon-interior.svg") no-repeat 87% 50% #63d1bb;
 }
 .goods-list__item--toys {
   background: url("../../img/icon-toy.svg") no-repeat 87% 50% #56c3b2;
@@ -30,15 +30,20 @@
     &__item {
       width: auto;
       flex-grow: 1;
+      padding: 22px 22px;
+    }
+    &__link {
+      .font(@osb2, 1.3em, 1.5);
     }
   }
 }
 @media (min-width: @desktop-width) {
   .goods-list {
-    margin: 350px 100px 0 100px;
+    margin: 365px 100px 0 100px;
     &__item {
       width: auto;
       flex-grow: 1;
+      padding: 20px 20px;
     }
   }
 }

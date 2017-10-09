@@ -40,6 +40,7 @@
 @media (min-width: @tablet-width) {
 
   .page-header{
+
     &__top {
       display: flex;
       justify-content: flex-start;
@@ -68,6 +69,7 @@
     }
 
     &__content-catalog {
+      height: 210px;
       margin-top: 0px;
     }
 
@@ -79,8 +81,8 @@
     &__title {
       .font(@osb2, 2.7em, 1.2);
       width: 595px;
-      padding-top: 55px;
-      margin: 0px auto 0;
+      padding: 0px;  /* 98 */
+      margin: 95px auto 0;
     }
   }
   .catalog-main {
@@ -106,9 +108,10 @@
       order-top: 1px solid #ececec;
       background: url("../../img/hero-mobile@1x.jpg") no-repeat;
       background-position: center 0px;
-      background-size: 90%;
+      background-size: 100%;
     }
     &__content-catalog {
+      height: 235px;
       margin-top: 0px;
     }
     &__content-form {
@@ -117,10 +120,10 @@
       border: 1px solid green;
     }
     &__title {
-      .font(@osb2, 3.2em, 1.1);
+      .font(@osb2, 3.5em, 1);
       width: 650px;
-      padding: 55px 0px 0px;
-      margin: 0px auto 0px;
+      padding: 0px 0px 0px;
+      margin: 90px auto 0px;
     }
   }
 }
