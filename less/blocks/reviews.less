@@ -1,4 +1,4 @@
-.reviews {
+  .reviews {
   display: block;
   .font(@os1, 1em, 1);
 }
@@ -111,9 +111,10 @@
       margin: 85px 0 0 275px; /* 85 */
     }
     &__text {
-      .font(@os1, 1em, 1.9);
+      .font(@os1, 1.05em, 1.9);
       order: 2;
-      margin: 45px 70px 0 275px;
+      width: 770px;
+      margin: 45px 0px 0 275px;
       padding: 0;
     }
     &__name-email {
@@ -132,14 +133,15 @@
     }
     &__toggles {
       order: 4;
-      width: 165px;
+      width: 175px;
       margin: 60px 100px 0 auto; /* 20 */
     }
     &__toggle--prev { order: ; }
     &__toggle--next { order: ; }
-    &__button {
+    &__button.button-tab {
       order: 1;
-      width: 175px !important;
+      width: 175px;
+      padding: 0;
       margin: 85px 100px 0 auto; /* 85 */
     }
   }
