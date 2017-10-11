@@ -83,10 +83,11 @@ display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 630px;
-    margin: 70px 0;
+    margin: 70px 0 0;
     &__title {
       .font(@osb1, 3.2em, 1);
       margin: 50px 0px 0px 275px;
+      padding-right: 80px;
     }
     &__list {
       width: 300px;
@@ -95,7 +96,16 @@ display: flex;
     }
     &__email { margin: 0px 0px 0px 10px;;}
     &__item { margin: 0; }
-    &__value { }
+    &__item--address {
+      margin-top: 5px;
+    }
+    &__value {
+      border-bottom: 1px solid #62d1ba;
+    }
+    &__value--address {
+      .font(@os1, 1em, 2);
+      border: none;
+    }
     &__map { order: 3; }
     &__map-wrapper {
       width: 525px;
@@ -108,8 +118,6 @@ display: flex;
     }
     &__map-image {
       margin: 0 auto;
-      width: 520px;
-      height: 450px;
       order: 1px solid lightgrey;  /* - */
     }
     &__button {
