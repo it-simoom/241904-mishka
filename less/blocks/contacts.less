@@ -1,42 +1,50 @@
 .contacts {
   .font(@os1, 1em, 1);
-  widht: 320px;
+  margin-top: 45px;
 }
 .contacts__title {
+  .font(@osb1, 1.1em, 1);
   display: block;
-  padding: 0px 110px 30px 0px;
+  padding: 0px 110px 20px 0px;
   margin: 0px 0px 0px 30px;
 }
 .contacts__list {
+  .font(@os1, 0.95em, 1);
   display: flex;
-  flex-direction: row;
-  flex-basis: 150px;
   flex-wrap: wrap;
-  widht: 320px;
-  height: 120px;
-  align-items: stretch;
-  justify-content: space-around;
+  height: 180px; /* ? */
+  padding-left: 30px;
 }
-.contacts__email {
-display: flex;
+.contacts__email {  /* display: flex; */
+height: 20px;
 }
 .contacts__address {
 display: flex;
+align-items: baseline;
+margin-top: 35px;
 }
 .contacts__item {
-  margin-right: ;
-  margin-left: 30px;
+  margin-left: 0px;
 }
 .contacts__value {
   width: 200px;
-  margin: 0 20px 0 20px;
-  .font(@os1, 1em, 1);
+  margin-left: 20px;
+}
+.contacts__value--email {
+  border-bottom: 1px solid #62d1ba;
+}
+.contacts__value--address {
+  .font(@os1, 0.95em, 2.1);
+  display: block;
+  width: 140px;
 }
 .contacts__map-object {
   display: none;
 }
+.contacts__map-wrapper {
+  margin: 45px 0 40px 0;
+}
 .contacts__map-image {
-  margin: 35px 0 40px 0;
   width: 320px;
 }
 .contacts__button {
@@ -51,70 +59,75 @@ display: flex;
       margin: 50px 0px 40px 50px;
       padding-top: 20px;
     }
-    &__email { margin: 0px 0px 0px 10px;}
-    &__address { }
-    &__item { margin: 0; }
-    &__value { }
+    &__list {
+      .font(@os1, 1em, 1);
+      padding-left: 50px;
+      height: auto;
+    }
+    &__address {
+      margin-top: 0;
+      margin-left: 80px;
+    }
+    &__value--address {
+      .font(@os1, 1em, 1.9);
+      width: 200px;
+      display: block;
+    }
+
     &__map-wrapper {
       width: 768px;
       height: 455px;
+      margin: 60px 0 0px 0;
       overflow: hidden;
-      order: 1px solid green;  /* - */
-      text-align: center;
-      background: url("../../img/map-mobile@1x.jpg");
-    }
-    &__map-image {
-      margin: 0 auto;
-      width: 520px;
-      height: 450px;
-      order: 1px solid lightgrey;  /* - */
+      text-align: center; /* temp */
+      background: url("../../img/map-mobile@1x.jpg"); /* temp */
     }
     &__button.button {
       width: 230px;
-      margin: 70px 0px 40px 275px;
+      margin: 55px 0px 40px 275px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
-    background: url("../../img/icon-flag.svg") no-repeat 160px 60px;
+    background-position: 160px 60px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: flex-start;
     height: 630px;
-    margin: 70px 0;
-    &__title {
-      .font(@osb1, 3.2em, 1);
-      margin: 50px 0px 0px 275px;
-    }
-    &__list {
-      width: 300px;
-      margin: 30px 0px 0px 275px;
-      order: 1px solid green;  /* - */
-    }
-    &__email { margin: 0px 0px 0px 10px;;}
-    &__item { margin: 0; }
-    &__value { }
-    &__map { order: 3; }
-    &__map-wrapper {
-      width: 525px;
-      height: 450px;
-      overflow: hidden;
-      order: 1px solid green; /* - */
-      text-align: center;
-      margin: 0px 100px 0px 0px;
-      background: url("../../img/map-mobile@1x.jpg");
-    }
-    &__map-image {
-      margin: 0 auto;
-      width: 520px;
-      height: 450px;
-      order: 1px solid lightgrey;  /* - */
-    }
-    &__button {
-      margin: 70px 0px 40px 275px;
-      order: 2;
-    }
-  }
+    margin: 70px 0 0;
+
+   &__title {
+     .font(@osb1, 3.2em, 1);
+     margin: 50px 0px 0px 275px;
+     padding-right: 80px;
+   }
+   &__list {
+     width: 300px;
+     margin: 40px 0px 0px 275px;
+     padding-left: 0;
+   }
+   &__address {
+     margin-top: 30px;
+     margin-left: 0;
+   }
+   &__map { order: 3; }
+   &__map-wrapper {
+     width: 525px;
+     height: 450px;
+     overflow: hidden;
+     text-align: center;
+     margin: 0px 0px 0px 0px;
+   }
+   &__map-image {
+     width: 520px;
+     height: 450px;
+   }
+   &__button.button {
+     margin: 80px 0px 0px 275px;
+     order: 2;
+   }
+ }
 }

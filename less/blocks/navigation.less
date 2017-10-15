@@ -1,34 +1,14 @@
-.navigation {
-  margin: 0 25px 0 50px;
-  position: relative;
-}
-
 .navigation__toggle {
   background: transparent;
   margin: 0 20px 0 auto;
   border: none;
 }
+
 @media (min-width: @tablet-width) {
-  .navigation {
-    display: lex;
-    &__toggle { display: none;}
-    &__wraper {
-      isplay: flex;
-      width: auto;
-    }
+  .navigation__toggle { display: none;}
+
+  .navigation__image {
+    width: 20px;
+    height: 20px;
   }
-}
-
-.navigation__image {
-  width: 20px;
-  height: 20px;
-}
-
-.navigation__wraper {
-  display: one;
-  position: absolute;
-  width: 319px;
-  background: #ffffff;
-  top: 51px;
-  left: -263px;
 }

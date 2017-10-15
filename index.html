@@ -5,7 +5,7 @@
     <title>Главная</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="body_index">
     <header class="page-header">
       <div class="page-header__top">
         <a class="page-header__logo" href="catalog.html">
@@ -18,7 +18,7 @@
           <button class="navigation__toggle" href="#"><img class="navigation__image" src="img/icon-menu-open.svg"></button>
           <div class="navigation__wraper">  -->
 
-            <ul class="navigation__list menu-list">
+            <ul class="navigation__list menu-list menu-list--index">
               <li class="menu-list__item menu-list__item--logo">
                 <a class="menu-list__link" href="#">
                   <img class="menu-list__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Главная">
@@ -31,16 +31,16 @@
                 <a class="menu-list__link" href="#">Вязание на заказ</a>
               </li>
               <li class="menu-list__item menu-list__item--search">
-                <a class="menu-list__link link--search" href="#">Поиск по сайту</a>
+                <a class="menu-list__link menu-list__link--search" href="#">Поиск по сайту</a>
               </li>
               <li class="menu-list__item menu-list__item--cart">
                 <a class="menu-list__link" href="#">Корзина: <span class="menu-list__item-box">пока пуста</span></a>
               </li>
               <li class="menu-list__item menu-list__item--new">
-                <a class="menu-list__link link" href="#">Новые поступления</a>
+                <a class="menu-list__link" href="#">Новые поступления</a>
               </li>
               <li class="menu-list__item menu-list__item--sale">
-                <a class="menu-list__link link" href="#">Распродажа</a>
+                <a class="menu-list__link" href="#">Распродажа</a>
               </li>
               <li class="menu-list__item menu-list__item--delivery">
                 <span class="menu-list__item-box">Бесплатная доставка по России</span>
@@ -49,8 +49,9 @@
   <!--        </div>
   </nav>    -->
       </div>
-      <div class="page-header__content">
-        <h1 class="page-header__title">Милые штуки ручной<br> работы для дома</h1>
+
+      <div class="page-header__content-index">
+        <h1 class="page-header__title page-header--index-title">Милые штуки ручной<br> работы для дома</h1>
         <ul class="page-header__list goods-list">
           <li class="goods-list__item goods-list__item--furniture">
             <a class="goods-list__link" href="#">Предметы интерьера</a>
@@ -59,6 +60,7 @@
             <a class="goods-list__link" href="#">Детские игрушки</a>
           </li>
         </ul>
+        <div class="goods-list__wave"></div>
       </div>
     </header>
 
@@ -89,8 +91,9 @@
            <span class="featured__price-text">Цена:</span>
            <span class="featured__price-value">990 руб.</span>
          </div>
-         <button class="featured__button" type="button">ЗАКАЗАТЬ</button>
+         <button class="featured__button button" type="button">ЗАКАЗАТЬ</button>
        </div>
+       <div class="featured__wave"></div>
         <div class="add-to-cart">
           <b class="add-to-cart__title">ДОБАВИТЬ В КОРЗИНУ</b>
           <span class="add-to-cart__choose-size">Выберите размер:</span>
@@ -149,6 +152,7 @@
           </div>
           <button class="reviews__button button button-tab ">НАПИСАТЬ</button>
         </div>
+        <div class="reviews__wave"></div>
       </section>
 
       <section class="contacts">
@@ -156,11 +160,11 @@
         <div class="contacts__list">
           <div class="contacts__email">
             <span class="contacts__item">e-mail</span>
-            <span class="contacts__value">info@mimimishkashop.ru</span>
+            <span class="contacts__value contacts__value--email">info@mimimishkashop.ru</span>
           </div>
           <div class="contacts__address">
-            <span class="contacts__item">адрес</span>
-            <span class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д.19/8, офис 101</span>
+            <span class="contacts__item contacts__item--address">адрес</span>
+            <span class="contacts__value contacts__value--address">г. Санкт-Петербург, ул. Большая Конюшенная, д.19/8, офис 101</span>
           </div>
         </div>
         <div class="contacts__map">
