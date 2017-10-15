@@ -15,8 +15,7 @@
   height: 180px; /* ? */
   padding-left: 30px;
 }
-.contacts__email {
-display: flex;  /* ??? */
+.contacts__email {  /* display: flex; */
 height: 20px;
 }
 .contacts__address {
@@ -25,7 +24,7 @@ align-items: baseline;
 margin-top: 35px;
 }
 .contacts__item {
-  margin-left: 0px;  /* 30px */
+  margin-left: 0px;
 }
 .contacts__value {
   width: 200px;
@@ -35,9 +34,9 @@ margin-top: 35px;
   border-bottom: 1px solid #62d1ba;
 }
 .contacts__value--address {
+  .font(@os1, 0.95em, 2.1);
   display: block;
   width: 140px;
-  .font(@os1, 0.95em, 2.1);
 }
 .contacts__map-object {
   display: none;
@@ -65,7 +64,6 @@ margin-top: 35px;
       padding-left: 50px;
       height: auto;
     }
-    &__email { }
     &__address {
       margin-top: 0;
       margin-left: 80px;
@@ -76,9 +74,6 @@ margin-top: 35px;
       display: block;
     }
 
-    &__item {}
-    &__value { }
-
     &__map-wrapper {
       width: 768px;
       height: 455px;
@@ -87,8 +82,6 @@ margin-top: 35px;
       text-align: center; /* temp */
       background: url("../../img/map-mobile@1x.jpg"); /* temp */
     }
-    &__map-image { }
-
     &__button.button {
       width: 230px;
       margin: 55px 0px 40px 275px;
@@ -98,12 +91,14 @@ margin-top: 35px;
 
 @media (min-width: @desktop-width) {
   .contacts {
-    background: url("../../img/icon-flag.svg") no-repeat 160px 60px;
+    background-position: 160px 60px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: flex-start;
     height: 630px;
     margin: 70px 0 0;
+
    &__title {
      .font(@osb1, 3.2em, 1);
      margin: 50px 0px 0px 275px;
@@ -114,16 +109,10 @@ margin-top: 35px;
      margin: 40px 0px 0px 275px;
      padding-left: 0;
    }
-   &__email { }
    &__address {
      margin-top: 30px;
      margin-left: 0;
    }
-   &__item { }
-   &__item--address { }
-   &__value { }
-   &__value--address { }
-
    &__map { order: 3; }
    &__map-wrapper {
      width: 525px;

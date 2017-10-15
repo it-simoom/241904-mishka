@@ -2,16 +2,14 @@
 
    &__top {
      display: flex;
-     justify-content: center;
-     align-items: center;
-     position: relative;      /*  Temp line */
+     position: relative; /* Temp */
    }
    &__logo {
      padding: 20px 0;
      margin: 0 10px 0 120px;
    }
 
-  &__content {
+  &__content-index {
     height: 488px;
     border-top: 1px solid #ececec;
     background: url("../../img/hero-mobile@1x.jpg") no-repeat;
@@ -31,10 +29,9 @@
     color: #010000;
     text-align: center;
     width: 250px;
-    margin: 0px auto 0px;
+    margin: 0px auto;
     padding: 75px 0px 0px;
   }
-
 }
 
 @media (min-width: @tablet-width) {
@@ -43,13 +40,13 @@
 
     &__top {
       align-content: flex-start;
-      height: 90px;  /* ?????????? */
-      padding: 0px 0; /* ?????????? */
+      height: 90px;  /* ? */
+      padding: 0px 0; /* ? */
     }
     &__logo {
       display: none; /* --- */
     }
-    &__content {
+    &__content-index {
       height: 745px;
       background-position: center 0px;
       background-size: 140%;
@@ -66,11 +63,17 @@
     &__title {
       .font(@osb2, 2.7em, 1.2);
       width: 595px;
-      padding-top: 80px;  /* 98 */
+      padding-top: 80px;
     }
     &--index-title {
       padding: 0px;
       margin: 145px auto 0px;
+    }
+    &__wave {
+      width: 100%;
+      height: 30px;
+      border: 1px solid green;
+      background: url("../../img/") no-repeat 93% 50% #ececec;
     }
   }
 }
@@ -78,7 +81,7 @@
 @media (min-width: @desktop-width) {
   .page-header{
 
-    &__content {
+    &__content-index {
       background-size: 100%;
     }
     &__content-catalog {

@@ -7,39 +7,26 @@
   margin: 0 0 35px 0;
   &__title {
     .font(@os1, 0.8em, 2);
-    padding: 0;
-    margin-top: 20px;
-    margin-left: 0px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
   }
   &__type {
     .font(@osb1, 1em);
     height: 160px ; /* 170 */
-    padding: 0px 0;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-content: space-around;
-    justify-content: flex-start;
   }
-
   &__text { color: #62d1ba; }
   &__line {
-    position: relative;
+    .line();
     top: 7px;
     left: 20px;
-    display: inline-block;
-    width: 200px;
-    height: 0px;
-    argin: -15px 0px 0px 50px;
-    border: 0.5px solid green;
   }
   &__type-label-wrapper {
     display: flex;
     height: 120px;
     border: 1px solid green;
     align-content: space-around;
-    justify-content: flex-start;
     flex-wrap: wrap;
   }
   &__type-input { display: none; }
@@ -49,25 +36,19 @@
     margin: 5px 0px 0px 0px;
   }
   &__type-text {
-    display: inline-block;
     width: 190px;
     height: 30px;
-    border: 1px solid grey;
     margin: 10px 0px 10px 30px;
-    padding: 0px 0px 0px 0px;
-    flex-grow: ;
   }
 
   &__color {
     margin-top: 20px;
   }
+  &__color-input-wrapper { display: none; }
   &__color-list {
     .noListStyle();
     padding: 10px 0 10px 0;
   }
-
-  &__color-input-wrapper { display: none; }
-
   &__color-item {
     display: flex;
     align-items: center;
@@ -79,16 +60,15 @@
     .check-label()
   }
   &__color-label-v::after {
+    .check-label-checked();
     content:  "";
     position: absolute;
     top: 8px;
     left: 7px;
-    .check-label-checked()
   }
   &__color-name {
     .font(@osb1);
-    display: inline-block;
-    margin: 0px 0px 0px 20px;
+    margin-left: 20px;
   }
 
   &__fio {}
@@ -97,7 +77,6 @@
   }
   &__fio-label {
     .font(@osb1);
-    margin: 0px 0px 0px 0px;
   }
   &__fio-input {
     .input-text();
@@ -105,7 +84,7 @@
   }
 
   &__phone {
-    margin: 35px 0px 0px 0px;
+    margin-top: 35px;
   }
   &__phone-input {
     .input-text();
@@ -113,7 +92,7 @@
   }
 
   &__email {
-    margin: 35px 0px 0px 0px;
+    margin-top: 35px;
   }
   &__email-input {
     .input-text();
@@ -121,19 +100,17 @@
   }
 
   &__add {
-    margin: 35px 0px 0px 0px;
+    margin-top: 35px;
   }
   &__add-input {
+    .font(@os1, 1em);
     width: 260px;
     height: 140px;
     margin: 20px 0 10px 0;
     border: 2px solid #000000;
     padding: 15px;
     box-sizing: border-box;
-    .font(@os1, 1em);
   }
-
-  &__legend {}
   &__button { margin: 35px 0 20px 0; }
 }
 
@@ -147,21 +124,18 @@
 
     &__title {
       .font(@os1, 1em, 1.9);
-      margin-top: 85px;
-      margin-left: 50px;
-      padding-right: 0px;
+      margin: 85px 0 20px 50px;
       width: 610px;
-    }
-    &__text {
-      margin-top: 35px;
     }
     &__type {
       .font(@osb1, 1em);
       margin: 35px 0 40px 0;
-        border: 1px solid orange;
-        padding: 0px 0 0 50px;
+      border: 1px solid orange;
+      padding: 0px 0 0 50px;
     }
-
+    &__text {
+      margin-top: 35px;
+    }
     &__line { display: none; }
 
     &__type-label-wrapper {
@@ -169,17 +143,14 @@
       width: 400px;
       height: auto;
     }
-    &__type-input { display: none; }
-
     &__type-label {
       width: 20px;
       height: 20px;
       border: 15px solid #ffffff;
     }
-
     &__type-text {
-      width: 270px;
       .font(@osb1, 1.2em);
+      width: 280px;
       margin: 15px 0 0 30px;
     }
 
@@ -192,17 +163,16 @@
     &__color-input-wrapper { display: none; }
 
     &__color-list {
-      margin-left: 120px;
-      border: 1px solid orange;
       display: flex;
       flex-basis: 500px;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      flex-grow: ;
+      margin-left: 120px;
+      border: 1px solid orange; /* temp */
     }
 
     &__color-item {
-      width: 200px;
+      flex-basis: 200px;
+      width: 200px; /* ?????????? */
       margin: 10px 0px 10px 0px;
     }
 
@@ -211,23 +181,17 @@
     &__color-item.check-orange { margin-left: 57px; }
 
     &__color-label {
-      position: relative;
-      .check-label();
       width: 50px;
       height: 50px;
     }
     &__color-label-v::after {
-      content:  "";
-      position: absolute;
+      .check-label-checked-tab();
       top: 10px;
       left: 10px;
-      .check-label-checked-tab()
     }
     &__color-name {
       .font(@osb1);
-      display: inline-block;
-      margin: 0px 0px 0px 30px;
-      adding-left: 15px;
+      margin-left: 30px;
     }
 
     &__fio {
@@ -235,31 +199,22 @@
       padding: 0 50px 0 50px;
       margin-top: 40px;
     }
-    &__fio-wrapper {border: 1px solid orange;
+    &__fio-wrapper {
       display: flex;
       flex-wrap: wrap;
-      flex-basis: 400px;
       margin-left: 120px;
-      flex-grow: 1;
     }
     &__fio-point {
       display: flex;
       align-items: center;
-      flex-basis: 400px;
-      justify-content: center;
       flex-grow: 1;
       margin: 10px 0 10px 0;
     }
-
     &__fio-label {
       .font(@osb1, 1.2em);
     }
-
     &__fio-input {
-      .input-text();
-      .font(@os1, 1em);
       margin-left: 25px;
-      width: auto;
       flex-grow: 1;
     }
 
@@ -275,8 +230,6 @@
       margin-top: 0;
     }
     &__phone-input {
-      .input-text();
-      argin-top: 20px;
       margin-left: 130px;
       flex-grow: 1;
     }
@@ -292,16 +245,13 @@
       margin-top: 15px;
     }
     &__email-input {
-      .input-text();
       margin-left: 105px;
       flex-grow: 1;
     }
 
     &__add {
       display: flex;
-      display: flex;
       padding: 0 50px 0 50px;
-
     }
     &__add-input {
       margin-left: 120px;
@@ -316,170 +266,121 @@
     }
 
     &__legend {
-      display: block;
+      .font(@os1, 1em);
       width: 285px;
       order: 2;
-      .font(@os1, 1em);
     }
     &__button {
-      order: ;
-      margin: 0px 0 0px 0;  /* 40px 0 20px 0; */
-
+      margin: 0;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form-main {
-    padding: 0 0px 0 0px;
-  }
+
+  .form-main { }
+
   .form {
-    padding-left: 0;
-    padding-right: 0;
+
     &__title {
       .font(@os1, 1.1em, 1.8);
       margin-top: 135px;
       margin-left: 215px;
-      padding-right: 0px;
-      width: 610px;
     }
     &__text {
       margin-top: 35px;
     }
     &__type {
-      .font(@osb1, 1em);
       margin: 40px 0 0 0;
       padding-left: 100px;
     }
 
-    &__line { display: none; }
-
     &__type-label-wrapper {
       margin-left: 75px;
-      width: 400px;
-      height: 150px;
-    }
-    &__type-input { display: none; }
-
-    &__type-label {
-      width: 20px;
-      height: 20px;
-      border: 15px solid #ffffff;
-    }
-
-    &__type-text {
-      width: 270px;
-      .font(@osb1, 1.2em);
-      margin: 15px 0 0 30px;
     }
     &__color {
       margin-top: 30px;
       padding-left: 100px;
       height: 175px;
-
     }
     &__color-list {
-      .noListStyle();
-      margin-left: 70px;
-      border: 1px solid orange;
-      display: flex;
       flex-basis: 740px;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-content: center;
-      flex-grow: ;
-    }
-
-    &__color-input-wrapper { display: none; }
-
-    &__color-item {
-      display: flex;
-      margin: 10px 0px 10px 0px;
+      margin-left: 70px;
+      border: 1px solid orange; /* temp */
     }
     &__color-item.check-pink { margin-left: 90px;}
     &__color-item.check-black { margin-left: 0px;}
     &__color-item.check-orange { margin-left: 30px;}
 
-    &__color-label {
-      position: relative;
-      .check-label();
-      width: 50px;
-      height: 50px;
-    }
     &__color-label-v::after {
-      content:  "";
-      position: absolute;
+      .check-label-checked-tab();
       top: 8px;
       left: 7px;
-      .check-label-checked-tab()
     }
     &__color-name {
-      .font(@osb1);
-      display: inline-block;
-      margin: 0px 0px 0px 20px;
+      margin-left: 20px;
     }
 
     &__fio {
-      border: 1px solid green;
       margin-top: 25px;
-      padding-left: 100px;
+      padding: 0 100px 0 100px;
       display: flex;
     }
     &__fio-wrapper {
-      display: flex;
       flex-basis: 690px;
-      flex-grow: 0;
       margin-left: 70px;
     }
     &__fio-point {
-      flex-basis: 500px;
-      margin: 15px 0px 10px 0px; /* 25px 0px 0px 0px; */
+      margin: 15px 0px 10px 0px;
     }
 
     &__phone {
       height: 70px;
-      margin: 35px 0px 0px 0px;
-      padding: 35px 350px 0 100px;
+      margin-top: 35px;
+      padding: 35px 100px 0 100px;
       align-items: baseline;
-      flex-grow: 0;
     }
     &__phone-input {
-      .input-text();
-      background: url("../../img/icon-phone.svg") no-repeat 100% 50%;
+      flex-basis: 690px;
       margin-left: 80px;
+      flex-grow: 0;
     }
 
     &__email {
       height: 70px;
-      margin: 0;
-      padding: 0px 350px 50px 100px;
+      padding: 0px 100px 50px 100px;
       align-items: baseline;
     }
     &__email-input {
-      .input-text();
-      background: url("../../img/icon-mail.svg") no-repeat 100% 50%;
+      flex-basis: 690px;
       margin-left: 60px;
+      flex-grow: 0;
+    }
+
+    &__add {
+      margin: 35px 0px 0px 0px;
+      padding: 0 100px 0 100px;
+    }
+    &__add-input {
+      flex-basis: 690px;
+      margin-left: 77px;
+      flex-grow: 0;
     }
 
     &__order-wrapper {
-      padding-right: 350px;
-      margin: 0 0 35px 0;
+      width: 690px;
+      flex-basis: 690px;
+      padding: 0px 0px 0px 0px;
+      margin: 0 0 35px 210px;
     }
-    &__add {
-      margin: 35px 0px 0px 0px;
-      padding-left: 100px;
-      padding-right: 350px;
-    }
-    &__add-input {
-      margin-left: 77px;
-    }
-
     &__legend {
       margin-top: 15px;
+      flex-grow: 0;
     }
-    &__button {
-      margin: 35px 0 20px 0;
-      margin-left: 160px;
+    &__button.button {
+      margin: 35px 0 20px 0px;
     }
   }
 }
