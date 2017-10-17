@@ -2,17 +2,19 @@
   .noListStyle();
   &__item {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 30px auto;
+    margin: 30px 30px;
     flex-wrap: wrap;
-    padding: 0 0 0 30px;
-    border-bottom:  1px solid #ececec;
+    padding: 0 0 0 0px;  /* --- */
+    border:  1px solid #ececec;
   }
   &__name-link {
     .font(@osb1, 1.1em, 1);
-    margin: 25px 60px 0px 20px;
+    margin: 25px 20px 0px 20px;
+  }
+  &__name-link-toy {
+    width: 200px;
   }
   &__item-description {
     .font(@os1, 0.8em, 1);
@@ -33,25 +35,31 @@
 @media (min-width: @tablet-width) {
 
   .catalog-list {
-    margin-top: 100px;
+    margin-top: 80px;
+    padding: 0 50px;
     &__item {
       flex-direction: column;
       height: 335px;
+      margin: 55px 0px;
       border: 1px solid #ececec;
       border-top-width: 1px;
     }
     &__image-link {
-      width: 335px;
-      height: 335px;
+      width: 334px;  /* --- */
+      height: 334px; /* --- */
       border: 1px solid lightgrey; /* temp */
       text-align: center; /* temp */
       overflow: hidden;
     }
     &__image {
-      width: 350px; /* temp */
+      width: 334px  ; /* temp */
+      height: auto;
     }
     &__name-link {
       margin-left: 0px;
+    }
+    &__name-link-toy {
+      idth: 200px;
     }
     &__item-description {
       margin-left: 0px;
@@ -59,7 +67,7 @@
     &__price {
       flex-basis: 35px;
       margin: auto 0 0 0;
-      width: 335px;
+      width: 265px;
     }
   }
 }
@@ -70,11 +78,12 @@
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 150px;
+    padding: 0;
       &__item {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 315px;
+        width: 316px;
         height: 655px;
         padding: 0;
         border: 1px solid #ececec;
@@ -86,8 +95,8 @@
         overflow: hidden;
       }
       &__image {
-        margin-top: 30px;
-        width: 430px;
+        width: 315px;
+        height: auto;
       }
       &__name-link {
         margin-top: 0;  /* --- */

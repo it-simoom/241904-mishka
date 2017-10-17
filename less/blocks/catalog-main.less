@@ -33,15 +33,14 @@
 
     &__video-wrapper {
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
       margin-top: 55px;
     }
     &__video {
-      margin: 0;
+      margin: 0 50px;
       flex-grow: 1;
-      width: 680px;
-      height: 450px;
+      width: 668px;
+      height: 455px;
     }
     &__video-title {
       .font(@osb1, 1.3em, 1);
@@ -54,6 +53,7 @@
       .font(@os1, 0.95em, 1.9);
       order: 2;
       padding: 0px 65px 0px 65px;
+      margin-top: 10px; /* ??? */
     }
     &__button {
       order: 3;
@@ -74,6 +74,7 @@
     }
     &__video {
       flex-grow: 0;
+      margin: 0;
     }
     &__video-title {
       margin-top: 0;

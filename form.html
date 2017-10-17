@@ -21,7 +21,11 @@
             <ul class="navigation__list menu-list">
               <li class="menu-list__item menu-list__item--logo">
                 <a class="menu-list__link" href="#">
-                  <img class="menu-list__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Главная">
+                  <picture>
+                    <source media="(min-width: 1178px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="menu-list__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Главная">
+                </picture>
                 </a>
               </li>
               <li class="menu-list__item menu-list__item--catalog">

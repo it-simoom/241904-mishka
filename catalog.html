@@ -21,7 +21,11 @@
             <ul class="navigation__list menu-list">
               <li class="menu-list__item menu-list__item--logo">
                 <a class="menu-list__link" href="#">
-                  <img class="menu-list__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Главная">
+                  <picture>
+                    <source media="(min-width: 1178px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="menu-list__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Главная">
+                </picture>
                 </a>
               </li>
               <li class="menu-list__item menu-list__item--catalog">
@@ -60,7 +64,11 @@
         <ul class="catalog-main__list catalog-list">
           <li class="catalog-list__item">
             <a class="catalog-list__image-link" href="#">
-              <img class="catalog-list__image" src="img/photo-hare-mobile@1x.jpg" width="260px" eight="195px" alt="Зайчик-попрыгайчик">
+              <picture>
+                <source media="(min-width: 1178px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <img class="catalog-list__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260px" height="195px" alt="Зайчик-попрыгайчик">
+            </picture>
             </a>
             <a class="catalog-list__name-link">Зайчик-попрыгайчик</a>
             <span class="catalog-list__item-description">Рост 30 см, вес 200 г</span>
@@ -73,7 +81,11 @@
           </li>
           <li class="catalog-list__item">
             <a class="catalog-list__image-link" href="#">
-              <img class="catalog-list__image" src="img/photo-bowl-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
+              <picture>
+                <source media="(min-width: 1178px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <img class="catalog-list__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260px" height="195px" alt="Корзинка для белья">
+              </picture>
             </a>
             <a class="catalog-list__name-link">Корзинка для белья</a>
             <span class="catalog-list__item-description">Диаметр 15 см, высота 10 см</span>
@@ -86,9 +98,13 @@
           </li>
           <li class="catalog-list__item">
             <a class="catalog-list__image-link" href="#">
-              <img class="catalog-list__image" src="img/photo-toys-mobile@1x.jpg" width="260px" height="195px" alt="Зайчик-попрыгайчик">
+              <picture>
+                <source media="(min-width: 1178px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                <img class="catalog-list__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260px" height="195px" alt="Большая корзинка для игрушек">
+              </picture>
             </a>
-            <a class="catalog-list__name-link">Большая корзинка для игрушек</a>
+            <a class="catalog-list__name-link catalog-list__name-link-toy">Большая корзинка для игрушек</a>
             <span class="catalog-list__item-description">Диаметр 30 см, высота 30 см</span>
             <div class="catalog-list__price">
               <b class="catalog-list__price-value">1500 руб.</b>
@@ -101,7 +117,11 @@
       </div>
       <div class="catalog-main__video-wrapper">
         <b class="catalog-main__video-title">Процесс производства</b>
-        <img class="catalog-main__video" src="img\video-mobile@1x.jpg" poster="img\video-mobile@1x.jpg">
+        <picture>
+          <source media="(min-width: 1178px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img class="catalog-main__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" poster="img/video-mobile@1x.jpg">
+        </picture>
         <p class="catalog-main__video-text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
         <button class="catalog-main__button button">СДЕЛАТЬ ЗАКАЗ</button>
       </div>
