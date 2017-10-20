@@ -5,7 +5,7 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("postcss");
 var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+var server = require("gulp-browser-sync").create();
 
 var condense = require("gulp-csso");
 var rename = require("gulp-rename");
@@ -17,7 +17,7 @@ var include = require("posthtml-include");
 
 var cln = require("del");
 
-var sequence = require("run-sequence");
+var sequence = require("gulp-sequence");
 
 gulp.task( "style", function(){
   gulp.src("less/style.less")
@@ -26,17 +26,18 @@ gulp.task( "style", function(){
   .pipe( postcss([
     autoprefixer()
   ]))
-  .pipe( gulp.dest("build/css") )
+  .pipe( gulp.dest("css") )
+
   .pipe( condense() )
   .pipe( rename("style.min.css"))
-  .pipe( gulp.dest("build/css") )
+  .pipe( gulp.dest("css") )
 
   .pipe( server.stream() );
 })
 
-gulp.task( "serve", function(){  /* "serve", ["style"] */
+gulp.task( "serve", ["style"], function(){
   server.init({
-    server: "build/",
+    server: ".",
     notify: false,
     open: true,
     corse: true,
@@ -44,7 +45,7 @@ gulp.task( "serve", function(){  /* "serve", ["style"] */
   });
 
   gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html", ["html"]); /* .on(change, server.reload) */
+  gulp.watch("*.html").on(change, server.reload);
 })
 
 gulp.task("images", function(){
@@ -69,7 +70,7 @@ gulp.task("sprite", function(){
     inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe( gulp.dest("build/img"));
+  .pipe( gulp.dest("img"));
 })
 
 gulp.task("html", function(){
@@ -77,7 +78,7 @@ gulp.task("html", function(){
   .pipe( posthtml([
     include()
   ]) )
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("."));
 })
 
 gulp.task("copy", function(){
