@@ -5,25 +5,27 @@
   }
   &__video-wrapper {
     border: 1px solid #ececec;
-    margin: 30px auto 60px;
+    margin: 30px 30px 60px;
   }
   &__video {
-    margin: 0 auto 0 30px;
+    margin: 0 auto 0 0px;
   }
   &__video-title {
     .font(@osb1, 1em, 1.5);
     display: block;
     margin: auto;
-    padding: 20px 30px 25px 130px;
-    background: url("../../img/icon-video.svg") 23% 50% no-repeat;
+    padding: 20px 30px 25px 90px;
+    background: url("../../img/icon-video.svg") 15% 43% no-repeat;
   }
   &__video-text {
     .font(@os1, 0.8em, 2);
-    padding: 10px 65px 0px 65px;
+    padding: 10px 20px 0px 35px;
+    letter-spacing: 0.55px;
   }
   &__button {
     width: 190px;
-    margin: 10px 0px 30px 65px;
+    margin: 9px 0px 30px 34px;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -34,10 +36,10 @@
     &__video-wrapper {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 55px;
+      margin: 55px 50px 60px;
     }
     &__video {
-      margin: 0 50px;
+      margin: 0px;
       flex-grow: 1;
       width: 668px;
       height: 455px;
@@ -45,53 +47,54 @@
     &__video-title {
       .font(@osb1, 1.3em, 1);
       order: 1;
-      margin: 20px 0 0 0;
-      padding-left: 155px;
-      background-position: 65px center;
+      margin: 15px 0 0 0;
+      padding-left: 105px;
+      background-position: 40px 14px;
     }
     &__video-text {
       .font(@os1, 0.95em, 1.9);
       order: 2;
-      padding: 0px 65px 0px 65px;
+      padding: 0px 30px 0px 40px;
       margin-top: 10px; /* ??? */
+      letter-spacing: 0.1px;
     }
-    &__button {
+    &__button.button {
       order: 3;
       flex-grow: 1;
-      margin: 20px 70px 50px 65px;
+      margin: 25px 40px 50px 40px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-main {
-
+    &__wrapper { margin-top: 0;} /* - */
     &__video-wrapper {
-      padding: 0 50px 0 50px;
-      margin: 55px auto 60px;
+      margin: 55px 50px 60px;
       flex-direction: column;
       height: 455px;
     }
     &__video {
       flex-grow: 0;
       margin: 0;
+      width: 682px;
     }
     &__video-title {
       margin-top: 0;
       padding-top: 100px;
-      padding-left: 80px;
+      padding-left: 60px;
       width: 240px;
-      background-position: 80px 40px;
+      background-position: 61px 45px;
     }
     &__video-text {
       width: 250px;
-      margin: 40px 0 0 80px;
+      margin: 19px 0 0 60px;
       padding: 0;
     }
-    &__button {
-      width: 250px;
+    &__button.button {
+      width: 230px;
       flex-grow: 0;
-      margin: 50px 0 0 80px;
+      margin: 50px 0 0 60px;
       padding: 0;
     }
   }

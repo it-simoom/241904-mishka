@@ -3,7 +3,7 @@
 var gulp = require("gulp");
 var less = require("gulp-less");
 var plumber = require("gulp-plumber");
-var postcss = require("postcss");
+var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
@@ -17,11 +17,11 @@ var include = require("posthtml-include");
 
 var cln = require("del");
 
-var sequence = require("run-sequence");
+var run = require("run-sequence");
 
 gulp.task( "style", function(){
   gulp.src("less/style.less")
-  .pipe( plumber )
+  .pipe( plumber() )
   .pipe( less() )
   .pipe( postcss([
     autoprefixer()
@@ -103,7 +103,7 @@ gulp.task("clean", function(){
       "copy",
       "style",
       "sprite",
-   "html",
-    done
+      "html",
+      done
     );
   })

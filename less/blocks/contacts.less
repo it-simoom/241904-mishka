@@ -1,6 +1,6 @@
 .contacts {
   .font(@os1, 1em, 1);
-  margin-top: 45px;
+  margin-top: 35px;
 }
 .contacts__title {
   .font(@osb1, 1.1em, 1);
@@ -13,25 +13,22 @@
   display: flex;
   flex-wrap: wrap;
   height: 180px; /* ? */
-  padding-left: 30px;
+  padding: 19px 0 0 30px;
 }
 .contacts__email {  /* display: flex; */
 height: 20px;
 }
 .contacts__address {
 display: flex;
-align-items: baseline;
-margin-top: 35px;
-}
-.contacts__item {
   margin-left: 0px;
 }
 .contacts__value {
   width: 200px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .contacts__value--email {
   border-bottom: 1px solid #62d1ba;
+  margin-left: 25px;
 }
 .contacts__value--address {
   .font(@os1, 0.95em, 2.1);
@@ -42,36 +39,39 @@ margin-top: 35px;
   display: none;
 }
 .contacts__map-wrapper {
-  margin: 45px 0 40px 0;
+  margin: 32px 0 40px 0;
 }
 .contacts__map-image {
   width: 320px;
 }
-.contacts__button {
+.contacts__button.button {
   margin: 0px 0px 40px 30px;
+  font-size: 1.1em;
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
-    background: url("../../img/icon-flag.svg") no-repeat 680px 10px;
+    background: url("../../img/icon-flag.svg") no-repeat 668px 0px;
     &__title {
-      .font(@osb1, 2.7em, 1);
-      margin: 50px 0px 40px 50px;
+      .font(@osb1, 2.65em, 1);
+      margin: 43px 0px 40px 50px;
       padding-top: 20px;
     }
     &__list {
       .font(@os1, 1em, 1);
       padding-left: 50px;
+      padding-top: 0;
       height: auto;
     }
     &__address {
       margin-top: 0;
-      margin-left: 80px;
+      margin-left: 60px;
     }
     &__value--address {
-      .font(@os1, 1em, 1.9);
+      .font(@os1, 1em, 1.7);  /* 1.9 */
       width: 200px;
       display: block;
+      letter-spacing: 0.5px;
     }
 
     &__map-wrapper {
@@ -88,25 +88,26 @@ margin-top: 35px;
 
     &__button.button {
       width: 230px;
-      margin: 55px 0px 40px 275px;
+      margin: 55px 0px 40px 270px;  /* 275px */
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
-    background-position: 160px 60px;
+    background-position: 163px 60px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
-    height: 630px;
-    margin: 70px 0 0;
+    height: 540px;
+    margin: 65px 0 0;
 
    &__title {
      .font(@osb1, 3.2em, 1);
-     margin: 50px 0px 0px 275px;
+     margin: 52px 0px 0px 272px;
      padding-right: 80px;
+     letter-spacing: 0.5px;
    }
    &__list {
      width: 300px;
@@ -114,26 +115,26 @@ margin-top: 35px;
      padding-left: 0;
    }
    &__address {
-     margin-top: 30px;
+     margin-top: 37px;
      margin-left: 0;
    }
    &__map { order: 3; }
    &__map-wrapper {
      width: 525px;
-     height: 450px;
+     height: 457px;
      overflow: hidden;
      text-align: center;
-     margin: 0px 0px 0px 0px;
+     margin: 0px 0px 0px 5px;
    }
    &__map-image {
      width: auto;
    }
    &__map-image {
      width: 520px;
-     height: 450px;
+     height: 457px;
    }
    &__button.button {
-     margin: 80px 0px 0px 275px;
+     margin: 84px 0px 0px 275px;
      order: 2;
    }
  }

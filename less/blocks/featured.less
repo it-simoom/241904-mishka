@@ -5,7 +5,7 @@
 .featured__text {
   .font(@osb1, 1.6em, 1);
   display: block;
-  margin: 50px 0 0 30px;
+  margin: 31px 0 0 30px;  /* 50px 0 0 30px */
 }
 .featured__title-clarify {
   .font(@osb1, 1em, 1);
@@ -13,14 +13,15 @@
   text-transform: uppercase;
   margin: 10px 0 0 30px;
   color: #63d1bb;
+  letter-spacing: 0.7px;
 }
 .featured__description {
-  .font(@os1, 0.98em, 1.45);
-  margin: 30px 25px 0 30px;
+  .font(@os1, 0.98em, 1.5);
+  margin: 25px 25px 0 30px;
 }
 .featured__list {
   .font(@os1, 0.95em, 1);
-  margin: 20px 10px 0 30px;
+  margin: 20px 10px 25px 30px;  /* 20px 10px 25px 30px; */
   border-collapse: collapse;
   width: 260px;
 }
@@ -30,7 +31,7 @@
   border-width: 0 0 1px 0;
 }
 .featured__value {
-  padding-left: 30px;
+  padding-left: 15px;
 }
 .featured__picture {
   margin: 30px 30px 0 30px;
@@ -43,14 +44,24 @@
 }
 .featured__price-wrapper {
   .font(@osb1);
-  padding: 30px;
+  padding: 28px 30px 20px; /* 30px */
   text-align: center;
 }
 .featured__button {
-  margin: 10px 0px 30px 30px;
+  margin: 11px 0px 30px 30px;
+}
+.featured__wave {
+  width: 100%;
+  height: 17px;
+  border: 1px solid gree;
+  background: url("../../img/bg-zigzag-line.svg") no-repeat -20px;
+  background-size: 110%;
 }
 
 @media (min-width: @tablet-width) {
+  .featured {
+    margin-top: 42px;
+  }
   .featured__title {
     display: flex;
     justify-content: space-between;
@@ -63,13 +74,14 @@
     margin: 0 0 0 50px;
   }
   .featured__title-clarify {
-    margin: 0 50px 0 0px;
-    width: 100px;
+    margin: 8px 50px 0 0px;
+    width: 125px; /* ????? */
+    text-align: center; /* ????? */
   }
   .featured__content {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 485px;  /* 500px */
     padding-top: 20px;
     flex-wrap: wrap;
   }
@@ -77,10 +89,14 @@
     .font(@os1, 1em, 1.9);
     margin: 20px 25px 0 50px;
     width: 280px;
+    letter-spacing: 0.5px;
   }
   .featured__list {
     margin: 35px 10px 0 50px;
     width: 290px;
+  }
+  .featured__value {
+    padding-left: 0px;
   }
   .featured__picture {
     margin: 30px 20px 0 0px;
@@ -94,10 +110,10 @@
     height: 400px;
   }
   .featured__price-wrapper {
-    .font(@osb1, 1.5em, 1);
+    .font(@osb1, 1.31em, 1);
     width: 280px;
-    padding: 0px;
-    margin: 50px 0 30px 50px;
+    padding: 0 0 0 5px;
+    margin: 57px 0 28px 50px; /* 57px 0 28px 50px */
   }
   .featured__button.button {
     margin: 10px 0px 30px 50px;
@@ -111,6 +127,7 @@
     background-size: 105%;
   }
 }
+
 @media (min-width: @desktop-width) {
   .featured {
     margin: 70px 0 0 0;
@@ -120,29 +137,32 @@
     margin: 0;
     height: 70px;
     position: relative;
-    top: 50px;
+    top: 60px;  /* 60px */
   }
   .featured__text {
-    .font(@osb1, 3.25em, 1);
-    margin: 0 0 0 30px;
+    .font(@osb1, 3.29em, 1);
+    margin: 0 0 10px 25px; /* ?? 0 0 0px 30px; ?? */
     order: 1;
   }
   .featured__title-clarify {
-    margin: 0 0px 0 145px;
+    margin: 0 0px 0 120px;
+    ext-align: center;  /* убрать дублирование с tablet */
   }
   .featured__content {
-    height: 730px;
+    height: 720px;
     margin: -70px 0px 0 0;
     padding: 0;
   }
   .featured__description {
-    margin: 160px 25px 0 275px;
+    margin: 168px 25px 0 275px;
+    letter-spacing: 0.5px;
+
   }
   .featured__list {
-    margin: 35px 10px 0 275px;  /* temp */
+    margin: 48px 10px 0 275px;  /* temp */
   }
   .featured__picture {
-    margin-top: 0;
+    margin-top: 10px;
     margin-right: 55px;
     width: 525px;
     height: 635px;
@@ -153,7 +173,7 @@
   }
   .featured__price-wrapper {
     width: 270px;
-    margin: 115px 0 30px 275px;
+    margin: 110px 0 28px 270px;
     padding-left: 20px;
   }
   .featured__button.button {
@@ -161,10 +181,10 @@
     width: 290px;
   }
   .featured__wave {
-    width: 100%;
+    width: 92%;
     height: 27px;
-    border: 1px solid gree;
-    background: url("../../img/bg-zigzag-line.svg") no-repeat -20px;
-    background-size: 105%;
+    border: 1px solid gree; /* - */
+    background: url("../../img/bg-zigzag-line.svg") no-repeat 100px;
+    background-size: 100%;
   }
 }

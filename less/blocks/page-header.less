@@ -6,7 +6,7 @@
    }
    &__logo {
      padding: 20px 0;
-     margin: 0 10px 0 120px;
+     margin: 0 10px 0 115px;
    }
 
    &__content-index {
@@ -23,7 +23,7 @@
     height: 180px;
   }
   &__content-catalog {
-    height: 175px;
+    height: 178px;
     background: #f1f1f1;
     border-top: #ececec;
   }
@@ -34,6 +34,10 @@
     width: 250px;
     margin: 0px auto;
     padding: 75px 0px 0px;
+  }
+  &--index-title {
+    padding: 0px;
+    margin: 72px auto 0px;
   }
 }
 
@@ -50,14 +54,14 @@
       display: none; /* --- */
     }
     &__content-index {
-      height: 745px;
+      height: 734px;
       background: url("../../img/hero-tablet@1x.jpg") no-repeat;
-      background-position: center 0px;
-      background-size: 140%;
+      background-position: center -5px;
+      background-size: 1150px 745px;;
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx)  {
       background: url("../../img/hero-tablet@2x.jpg") no-repeat;
-      background-position: center 0px;
-      background-size: 140%;
+      background-position: center -5px;
+      background-size: 1150px 745px;
       }
     }
 
@@ -72,11 +76,11 @@
     &__title {
       .font(@osb2, 2.7em, 1.2);
       width: 595px;
-      padding-top: 80px;
+      padding-top: 92px;
     }
     &--index-title {
       padding: 0px;
-      margin: 145px auto 0px;
+      margin: 150px auto 0px;
     }
     &__wave {
       width: 100%;
@@ -94,11 +98,11 @@
     &__content-index {
       background: url("../../img/hero-desktop@1x.jpg") no-repeat;
       background-position: center 0px;
-      background-size: 100%;
+      background-size: 1245px 740px;
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx)  {
       background: url("../../img/hero-desktop@2x.jpg") no-repeat;
       background-position: center 0px;
-      background-size: 100%;
+      background-size: 1245px 740px;
       }
     }
     &__content-catalog {
@@ -109,13 +113,16 @@
       border: 1px solid green;  /* --- */
     }
     &__title {
-      .font(@osb2, 3.5em, 1);
+      .font(@osb2, 3.28em, 1);
       width: 650px;
-      padding-top: 90px;
+      padding-top: 93px;
     }
     &--index-title {
       padding: 0px;
       margin: 180px auto 0px;
+      font-size: 3.31em;  /* ????? */
+      line-height: 1.1; /* ????? */
+      margin-top: 150px;  /* ????? */
     }
   }
 }

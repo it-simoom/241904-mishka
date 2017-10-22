@@ -3,7 +3,7 @@
 .about__title {
   .font(@osb2, 1.6em, 1.1);
   display: block;
-  margin: 35px 0px 0px 30px;
+  margin: 25px 0px 0px 30px;
 }
 .about__list {
   list-style-type: none;
@@ -16,25 +16,25 @@
   border-width: 1px 0px 0px 0px;  /* temp */
   background-position: 30px 30%;
   background-repeat: no-repeat;
-  &--eco { background: url("../../img/icon-feature-flower.svg") no-repeat 30px 30%; }
-  &--scan { background: url("../../img/icon-feature-money.svg") no-repeat 30px 30%; }
-  &--like { background: url("../../img/icon-feature-heart.svg") no-repeat 30px 30%;; }
-  &--hand { background: url("../../img/icon-feature-ball.svg") no-repeat 30px 30%; padding-right: 50px; }
-  &--sup { background: url("../../img/icon-feature-rocket.svg") no-repeat 30px 30%;  padding-right: 50px;}
-  &--pack{ background: url("../../img/icon-feature-gift.svg") no-repeat 30px 30%; }
+  &--eco { background: url("../../img/icon-feature-flower.svg") no-repeat 38px 20%; padding-top: 70px; }
+  &--scan { background: url("../../img/icon-feature-money.svg") no-repeat 30px 30%; padding-right: 85px; }
+  &--like { background: url("../../img/icon-feature-heart.svg") no-repeat 38px 37%; padding-top: 85px; }
+  &--hand { background: url("../../img/icon-feature-ball.svg") no-repeat 34px 34%; padding-right: 50px; }
+  &--sup { background: url("../../img/icon-feature-rocket.svg") no-repeat 25px 32%; padding-top: 82px; padding-right: 35px;}
+  &--pack{ background: url("../../img/icon-feature-gift.svg") no-repeat 32px 32%; padding-top: 82px; padding-right: 85px; }
 }
-.about__item-link {
-  .font(@osb2, 1em, 1);
+.about__item-link {width: 220px;
+  .font(@osb2, 1.07em, 1.2);
   text-decoration: none;
   color: #010000;
 }
 
 @media (min-width: @tablet-width) {
   .about {
-    height: 640px;
+    height: 588px;
   }
   .about__title {
-    .font(@osb2, 2.7em, 1);
+    .font(@osb2, 2.65em, 1);
     margin: 50px 0px 20px 50px;
   }
   .about__list {
@@ -50,14 +50,14 @@
     padding: 90px 0px 20px 0px;
     margin: 0 0 0 50px;
     flex-shrink: 1;
-    background-position: 0px 30%;
+    background-position: 0px 30%; /* ДЛЯ DESKTOP'A */
     border: none; /* temp */
-    &--eco { width: 220px; }
-    &--scan { width: 230px; }
-    &--like { width: 220px; }
-    &--hand { margin: 0 0 0 110px; }
-    &--sup { margin: 0 0 0 110px; }
-    &--pack { width: 270px; margin: 0 0 0 110px; }
+    &--eco { width: 220px; background-position: 9px 30%; }
+    &--scan { width: 245px; background-position: 0px 26%; padding-top: 85px; }
+    &--like { width: 220px; background-position: 9px 31%; padding-top: 85px; }
+    &--hand { margin: 0 0 0 90px; background-position: 3px 31%; padding-top: 87px; }
+    &--sup { width: 305px; margin: 0 0 0 90px; background-position: 0px 29%; }
+    &--pack { width: 270px; margin: 0 0 0 90px; background-position: 2px 27%; padding-top: 85px; }
   }
 }
 
@@ -67,10 +67,19 @@
   }
   .about__title {
     display: block;
-    margin-left: 275px;
+    margin: 57px 0 0 275px;
     .font(@osb2, 3.2em, 1);
+  }
+  .about__list {
+    margin-top: 15  px;
   }
   .about__item {
     margin: 0 0 0 275px;
+    &--eco { width: 220px; background-position: 9px 30%; }
+    &--scan { width: 245px; background-position: 0px 26%; padding-top: 85px; }
+    &--like { width: 220px; background-position: 9px 31%; padding-top: 85px; }
+    &--hand { margin: 0 0 0 105px; background-position: 3px 31%; padding-top: 87px; }
+    &--sup { width: 305px; margin: 0 0 0 105px; background-position: 0px 29%; }
+    &--pack { width: 270px; margin: 0 0 0 105px; background-position: 2px 27%; padding-top: 85px; }
   }
 }
